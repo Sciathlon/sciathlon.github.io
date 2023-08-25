@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Half marathon on Sciathlon</title>
+    <link>https://sciathlon.github.io/tags/half-marathon/</link>
+    <description>Recent content in Half marathon on Sciathlon</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>sciathlonblog@gmail.com</managingEditor>
+    <webMaster>sciathlonblog@gmail.com</webMaster>
+    <lastBuildDate>Sun, 13 May 2018 16:42:11 +0200</lastBuildDate><atom:link href="https://sciathlon.github.io/tags/half-marathon/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My first half marathon and its data analysis</title>
+      <link>https://sciathlon.github.io/post/my_first_half_marathon/</link>
+      <pubDate>Sun, 13 May 2018 16:42:11 +0200</pubDate>
+      <author>sciathlonblog@gmail.com</author>
+      <guid>https://sciathlon.github.io/post/my_first_half_marathon/</guid>
+      <description>A me-centered data analysis today where I will share my experience running my first half marathon and the race data.
+I&amp;rsquo;ve only been running regularly for a year, and I&amp;rsquo;d been dreaming about this day since I started. It was still kind of a dream for the longest time, something that I wanted but was still only a concept until the day arrived and I realized: &amp;ldquo;I&amp;rsquo;m running a half marathon today.</description>
+    </item>
+    
+  </channel>
+</rss>

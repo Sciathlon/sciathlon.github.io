@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sports on Sciathlon</title>
+    <link>https://sciathlon.github.io/tags/sports/</link>
+    <description>Recent content in Sports on Sciathlon</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>sciathlonblog@gmail.com</managingEditor>
+    <webMaster>sciathlonblog@gmail.com</webMaster>
+    <lastBuildDate>Tue, 09 Jan 2018 21:53:16 +0100</lastBuildDate><atom:link href="https://sciathlon.github.io/tags/sports/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My favorite Sports Youtube Channels</title>
+      <link>https://sciathlon.github.io/post/best-sports-channels/</link>
+      <pubDate>Tue, 09 Jan 2018 21:53:16 +0100</pubDate>
+      <author>sciathlonblog@gmail.com</author>
+      <guid>https://sciathlon.github.io/post/best-sports-channels/</guid>
+      <description>Today there isn&amp;rsquo;t any data science, I just wanted to share a list of my favorite sports-related YouTube channels, in no particular order.
+TheGingerRunner If you are interested in running and want to learn more about trails, races, athletes, training, gear, nutrition, there are amazing ressources out therethat will teach and inspire you. I have compiled a little list of my favorite youtube channels that I have been following for years.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>eDNA on Sciathlon</title>
+    <link>https://sciathlon.github.io/tags/edna/</link>
+    <description>Recent content in eDNA on Sciathlon</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>sciathlonblog@gmail.com</managingEditor>
+    <webMaster>sciathlonblog@gmail.com</webMaster>
+    <lastBuildDate>Fri, 19 May 2023 12:14:13 -0400</lastBuildDate><atom:link href="https://sciathlon.github.io/tags/edna/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to install the Robitools</title>
+      <link>https://sciathlon.github.io/post/intalling_robitools/</link>
+      <pubDate>Fri, 19 May 2023 12:14:13 -0400</pubDate>
+      <author>sciathlonblog@gmail.com</author>
+      <guid>https://sciathlon.github.io/post/intalling_robitools/</guid>
+      <description>Introduction The OBITools are a set of tools meant to format, edit, filter and analyze environmental DNA (eDNA) next generation sequencing (NGS) data in the command line using bash. They were developed at the Laboratoire d&amp;rsquo;Ecologie ALpine (LECA), in Grenoble, France. There are many other pipelines for metabarcoding data analysis, but if you choose these, so as long as you can format your files for the OBITools (a sometimes non-trivial task, I know&amp;hellip;), they are fairly easy to get a handle on.</description>
+    </item>
+    
+  </channel>
+</rss>

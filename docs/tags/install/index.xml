@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Install on Sciathlon</title>
+    <link>https://sciathlon.github.io/tags/install/</link>
+    <description>Recent content in Install on Sciathlon</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>sciathlonblog@gmail.com</managingEditor>
+    <webMaster>sciathlonblog@gmail.com</webMaster>
+    <lastBuildDate>Sun, 14 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sciathlon.github.io/tags/install/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Anaconda packages and environments for bioinformatics: a tutorial</title>
+      <link>https://sciathlon.github.io/post/anacondatutorialblog/</link>
+      <pubDate>Sun, 14 May 2023 00:00:00 +0000</pubDate>
+      <author>sciathlonblog@gmail.com</author>
+      <guid>https://sciathlon.github.io/post/anacondatutorialblog/</guid>
+      <description>After abandoning this blog for several years I am back with different content. I want to write tutorials on what I&amp;rsquo;ve learned doing bioinformatics since I started my PhD, among other things and might be interesting or helpful to others. I started using anaconda during my postdoc in genomics and I use it every single day.
+Today, I wanted to write a summary of things I&amp;rsquo;ve learned using anaconda packages and environments for bioinformatics (but the same commands will work for other types of packages as well).</description>
+    </item>
+    
+  </channel>
+</rss>

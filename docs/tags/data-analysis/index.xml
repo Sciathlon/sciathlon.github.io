@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>data analysis on Sciathlon</title>
+    <link>https://sciathlon.github.io/tags/data-analysis/</link>
+    <description>Recent content in data analysis on Sciathlon</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>sciathlonblog@gmail.com</managingEditor>
+    <webMaster>sciathlonblog@gmail.com</webMaster>
+    <lastBuildDate>Tue, 05 Jun 2018 20:55:49 +0200</lastBuildDate><atom:link href="https://sciathlon.github.io/tags/data-analysis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Athlete&#39;s foot and its treatment</title>
+      <link>https://sciathlon.github.io/post/athletesfoot/</link>
+      <pubDate>Tue, 05 Jun 2018 20:55:49 +0200</pubDate>
+      <author>sciathlonblog@gmail.com</author>
+      <guid>https://sciathlon.github.io/post/athletesfoot/</guid>
+      <description>Today we will be looking at data about a health issue that affects many athletes: athlete&amp;rsquo;s foot. It&amp;rsquo;s not a very glamorous subject but it&amp;rsquo;s still interesting, as fungi are warrior eukaryotes that survive everywhere. Athlete&amp;rsquo;s foot is generally a fungal infection on the feet referred to as &amp;ldquo;tinea pedis&amp;rdquo; but can be something else that causes inflammation on the foot, however the definitions vary according to who you talk to&amp;hellip; I am going to stick to the more accepted definition which is the fungal infection.</description>
+    </item>
+    
+    <item>
+      <title>Running races and waste</title>
+      <link>https://sciathlon.github.io/post/running_and_waste/</link>
+      <pubDate>Tue, 29 May 2018 13:37:35 +0200</pubDate>
+      <author>sciathlonblog@gmail.com</author>
+      <guid>https://sciathlon.github.io/post/running_and_waste/</guid>
+      <description>I am tackling a new topic today, which is waste generated during races. I&amp;rsquo;ll tell you why this is coming up now. I started the racing season with a road 10km called Asparun which was a relatively small race, 354 runners on the 10k plus probably as many on the 5k, which is more people than I usually see at my small local races, and I saw so many people just throwing their water goblets not IN the trash but sometimes 500 meters away, and it shocked me.</description>
+    </item>
+    
+    <item>
+      <title>Favorite trail race: Tencin 15km analysis</title>
+      <link>https://sciathlon.github.io/post/tencin_15k_analysis/</link>
+      <pubDate>Thu, 24 May 2018 18:17:42 +0200</pubDate>
+      <author>sciathlonblog@gmail.com</author>
+      <guid>https://sciathlon.github.io/post/tencin_15k_analysis/</guid>
+      <description>I am continuing my journey to learn awk and I finally managed to process (almost) an entire file today so let&amp;rsquo;s analyse the 2018 Tencin trail race. It was my first trail race of the season, and it kicks off the &amp;ldquo;challenge intercommunal du grésivaudan&amp;rdquo;, which is a set of 11 races in this region called the Grésivaudan which is a valley in between the two mountains of Belledonne and Chartreuse in the Alps.</description>
+    </item>
+    
+    <item>
+      <title>My first half marathon and its data analysis</title>
+      <link>https://sciathlon.github.io/post/my_first_half_marathon/</link>
+      <pubDate>Sun, 13 May 2018 16:42:11 +0200</pubDate>
+      <author>sciathlonblog@gmail.com</author>
+      <guid>https://sciathlon.github.io/post/my_first_half_marathon/</guid>
+      <description>A me-centered data analysis today where I will share my experience running my first half marathon and the race data.
+I&amp;rsquo;ve only been running regularly for a year, and I&amp;rsquo;d been dreaming about this day since I started. It was still kind of a dream for the longest time, something that I wanted but was still only a concept until the day arrived and I realized: &amp;ldquo;I&amp;rsquo;m running a half marathon today.</description>
+    </item>
+    
+    <item>
+      <title>Biathlon data analysis</title>
+      <link>https://sciathlon.github.io/post/biathlon_data_analysis/</link>
+      <pubDate>Fri, 09 Feb 2018 22:25:58 +0100</pubDate>
+      <author>sciathlonblog@gmail.com</author>
+      <guid>https://sciathlon.github.io/post/biathlon_data_analysis/</guid>
+      <description>This week I&amp;rsquo;m at a metabarcoding school in Norway, so it gets dark very early and I have time for another post. In honor of the 2018 Winter Olympics finally kicking off, I asked a friend of mine who loves sports what data he would be interested in seeing in the sports that are in the winter Olympics and he answered &amp;ldquo;biathlon.&amp;rdquo; I found a website that collects lots of data on the sport called biathlonresults.</description>
+    </item>
+    
+  </channel>
+</rss>

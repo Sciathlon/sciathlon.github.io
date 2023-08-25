@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bioinformatics on Sciathlon</title>
+    <link>https://sciathlon.github.io/tags/bioinformatics/</link>
+    <description>Recent content in Bioinformatics on Sciathlon</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>sciathlonblog@gmail.com</managingEditor>
+    <webMaster>sciathlonblog@gmail.com</webMaster>
+    <lastBuildDate>Fri, 19 May 2023 12:14:13 -0400</lastBuildDate><atom:link href="https://sciathlon.github.io/tags/bioinformatics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to install the Robitools</title>
+      <link>https://sciathlon.github.io/post/intalling_robitools/</link>
+      <pubDate>Fri, 19 May 2023 12:14:13 -0400</pubDate>
+      <author>sciathlonblog@gmail.com</author>
+      <guid>https://sciathlon.github.io/post/intalling_robitools/</guid>
+      <description>Introduction The OBITools are a set of tools meant to format, edit, filter and analyze environmental DNA (eDNA) next generation sequencing (NGS) data in the command line using bash. They were developed at the Laboratoire d&amp;rsquo;Ecologie ALpine (LECA), in Grenoble, France. There are many other pipelines for metabarcoding data analysis, but if you choose these, so as long as you can format your files for the OBITools (a sometimes non-trivial task, I know&amp;hellip;), they are fairly easy to get a handle on.</description>
+    </item>
+    
+    <item>
+      <title>Anaconda packages and environments for bioinformatics: a tutorial</title>
+      <link>https://sciathlon.github.io/post/anacondatutorialblog/</link>
+      <pubDate>Sun, 14 May 2023 00:00:00 +0000</pubDate>
+      <author>sciathlonblog@gmail.com</author>
+      <guid>https://sciathlon.github.io/post/anacondatutorialblog/</guid>
+      <description>After abandoning this blog for several years I am back with different content. I want to write tutorials on what I&amp;rsquo;ve learned doing bioinformatics since I started my PhD, among other things and might be interesting or helpful to others. I started using anaconda during my postdoc in genomics and I use it every single day.
+Today, I wanted to write a summary of things I&amp;rsquo;ve learned using anaconda packages and environments for bioinformatics (but the same commands will work for other types of packages as well).</description>
+    </item>
+    
+    <item>
+      <title>Athlete&#39;s foot and its treatment</title>
+      <link>https://sciathlon.github.io/post/athletesfoot/</link>
+      <pubDate>Tue, 05 Jun 2018 20:55:49 +0200</pubDate>
+      <author>sciathlonblog@gmail.com</author>
+      <guid>https://sciathlon.github.io/post/athletesfoot/</guid>
+      <description>Today we will be looking at data about a health issue that affects many athletes: athlete&amp;rsquo;s foot. It&amp;rsquo;s not a very glamorous subject but it&amp;rsquo;s still interesting, as fungi are warrior eukaryotes that survive everywhere. Athlete&amp;rsquo;s foot is generally a fungal infection on the feet referred to as &amp;ldquo;tinea pedis&amp;rdquo; but can be something else that causes inflammation on the foot, however the definitions vary according to who you talk to&amp;hellip; I am going to stick to the more accepted definition which is the fungal infection.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+ 
+
+
+      <title>Figure skating athletes&#39; personal best - </title>
+
+  <meta name="description" content="Today I am writing another piece about figure skating, also another piece about data analysis in this event. But I am not focusing solely on the Olympics this time but on the best scoring athletes and the best scoring event of each athlete. There is a lot of data to go through, so let&rsquo;s get right into it! The data comes from the (International skating Union) website which I downloaded on the 20/01/2018 (if you try my code and the results are different it might be because the data on the website has changed)."><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Sciathlon",
+    
+    "url": "https:\/\/sciathlon.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/sciathlon.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/sciathlon.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/sciathlon.github.io\/post\/personal_best_figure_skating\/",
+          "name": "Figure skating athletes\u0027 personal best"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : ""
+  },
+  "headline": "Figure skating athletes\u0027 personal best",
+  "description" : "Today I am writing another piece about figure skating, also another piece about data analysis in this event. But I am not focusing solely on the Olympics this time but on the best scoring athletes and the best scoring event of each athlete. There is a lot of data to go through, so let\u0026rsquo;s get right into it! The data comes from the (International skating Union) website which I downloaded on the 20\/01\/2018 (if you try my code and the results are different it might be because the data on the website has changed).",
+  "inLanguage" : "en",
+  "wordCount":  2056 ,
+  "datePublished" : "2018-01-20T20:32:34",
+  "dateModified" : "2018-01-20T20:32:34",
+  "image" : "https:\/\/sciathlon.github.io\/img\/avatar-icon.png",
+  "keywords" : [ "" ],
+  "mainEntityOfPage" : "https:\/\/sciathlon.github.io\/post\/personal_best_figure_skating\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/sciathlon.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/sciathlon.github.io\/img\/avatar-icon.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Figure skating athletes&#39; personal best" />
+<meta property="og:description" content="Today I am writing another piece about figure skating, also another piece about data analysis in this event. But I am not focusing solely on the Olympics this time but on the best scoring athletes and the best scoring event of each athlete. There is a lot of data to go through, so let&rsquo;s get right into it! The data comes from the (International skating Union) website which I downloaded on the 20/01/2018 (if you try my code and the results are different it might be because the data on the website has changed).">
+<meta property="og:image" content="https://sciathlon.github.io/img/avatar-icon.png" />
+<meta property="og:url" content="https://sciathlon.github.io/post/personal_best_figure_skating/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Sciathlon" />
+
+  <meta name="twitter:title" content="Figure skating athletes&#39; personal best" />
+  <meta name="twitter:description" content="Today I am writing another piece about figure skating, also another piece about data analysis in this event. But I am not focusing solely on the Olympics this time but on the best scoring athletes and …">
+  <meta name="twitter:image" content="https://sciathlon.github.io/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link href='https://sciathlon.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.111.3">
+  <link rel="alternate" href="https://sciathlon.github.io/index.xml" type="application/rss+xml" title="Sciathlon"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"><link rel="stylesheet" href="https://sciathlon.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://sciathlon.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://sciathlon.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-119123667-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://sciathlon.github.io/">Sciathlon</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">Samples</a>
+              <div class="navlinks-children">
+                
+                  <a href="/post/2017-03-07-bigimg-sample">Big Image Sample</a>
+                
+                  <a href="/post/2017-03-05-math-sample">Math Sample</a>
+                
+                  <a href="/post/2016-03-08-code-sample">Code Sample</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Sciathlon" href="https://sciathlon.github.io/">
+            <img class="avatar-img" src="https://sciathlon.github.io/img/avatar-icon.png" alt="Sciathlon" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Figure skating athletes&#39; personal best</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on January 20, 2018
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;10&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;2056&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>Today I am writing another piece about figure skating, also another
+piece about data analysis in this event. But I am not focusing solely on
+the Olympics this time but on the best scoring athletes and the best
+scoring event of each athlete. There is a lot of data to go through, so
+let&rsquo;s get right into it! The data comes from the (<a href="http://www.isu.org/statistics">International skating
+Union</a>) website which I downloaded on the
+20/01/2018 (if you try my code and the results are different it might be
+because the data on the website has changed). Reproducible blogging is
+important!</p>
+<h1 id="personal-best-for-athletes-a-first-look-at-the-data">Personal Best for athletes: a first look at the data</h1>
+<p>I first load up the files I compiled from the data found on the ISU
+website. The ladies&rsquo; and men&rsquo;s event are separated into two different
+files because the data is separated on the website and it wouldn&rsquo;t make
+any sense to compare anyways. Let&rsquo;s check out a few lines of each the
+dataframes to see how they are structured:</p>
+<pre><code>##   rank              Name NationID                          Event
+## 1    1 Evgenia MEDVEDEVA      RUS     ISU World Team Trophy 2017
+## 2    2          Yuna KIM      KOR  XXI Olympic Winter Games 2010
+## 3    3 Adelina SOTNIKOVA      RUS XXII Olympic Winter Games 2014
+## 4    4    Alina ZAGITOVA      RUS   ISU Grand Prix Final 2017/18
+## 5    5   Satoko MIYAHARA      JPN   ISU Grand Prix Final 2016/17
+## 6    6        Mai MIHARA      JPN     ISU World Team Trophy 2017
+##         Date  Score Category
+## 1 20.04.2017 241.31        S
+## 2 25.02.2010 228.56        S
+## 3 20.02.2014 224.59        S
+## 4 09.12.2017 223.30        S
+## 5 10.12.2016 218.33        S
+## 6 20.04.2017 218.27        S
+
+##   rank             Name NationID                                  Event
+## 1    1     Yuzuru HANYU      JPN           ISU Grand Prix Final 2015/16
+## 2    2        Shoma UNO      JPN           ISU CS Lombardia Trophy 2017
+## 3    3 Javier FERNANDEZ      ESP           ISU World Championships 2016
+## 4    4      Nathan CHEN      USA ISU Four Continents Championships 2017
+## 5    5       Boyang JIN      CHN           ISU World Championships 2017
+## 6    6     Patrick CHAN      CAN            ISU GP Trophee Bompard 2013
+##       Date  Score category
+## 1 12/12/15 330.43        S
+## 2 16/09/17 319.84        S
+## 3 01/04/16 314.93        S
+## 4 19/02/17 307.46        S
+## 5 01/04/17 303.58        S
+## 6 16/11/13 295.27        S
+</code></pre>
+<p>This data is very rich, it&rsquo;s perfect for us. Let&rsquo;s break it down and
+look a little more specifically. Last time I was very interested in how
+France did. I was talking with a Turkish friend and she wondered what
+her fellow Turkish did in the sport, so let&rsquo;s look at Turkish athletes
+for a change:</p>
+<pre><code>##      rank                   Name NationID                            Event
+## 293   286        Tugba KARADEMIR      TUR      European Championships 2008
+## 420   410     Guzide Irmak BAYIR      TUR            ISU JGP Brisbane 2017
+## 502   487             Sila SAYGI      TUR      European Championships 2013
+## 550   531           Birce ATABEY      TUR ISU CS Denkova Staviski Cup 2015
+## 572   552           Ilayda BAYAR      TUR            ISU JGP Riga Cup 2017
+## 573   553             Elif ERDEM      TUR         ISU JGP Croatia Cup 2015
+## 714   685           Sinem KUYUCU      TUR ISU CS Denkova Staviski Cup 2015
+## 750   718        Selin HAFIZOGLU      TUR         ISU JGP Czech Skate 2013
+## 784   748       Melisa Sema ATIK      TUR    ISU JGP Sencila Bled Cup 2012
+## 822   781             Ekin SAYGI      TUR     ISU JGP Minsk Arena Cup 2017
+## 845   802 Zeynep Dilruba SANOGLU      TUR      ISU JGP Cup of Austria 2015
+## 1142 1073           Ecem ERTENLI      TUR           ISU JGP Bosphorus 2012
+## 1183 1110              Duygu SEN      TUR             ISU JGP Austria 2011
+## 1284 1210        Aybike KAHRIMAN      TUR           ISU JGP Bosphorus 2009
+## 1293 1219            Buse COSKUN      TUR  Pokal der Blauen Schwerter 2004
+## 1307 1233           Beril BEKTAS      TUR  World Junior Championships 2005
+##            Date  Score Category
+## 293  26.01.2008 138.73        S
+## 420  26.08.2017 124.78        J
+## 502  26.01.2013 119.27        S
+## 550  23.10.2015 114.73        S
+## 572  08.09.2017 113.06        J
+## 573  10.10.2015 113.05        J
+## 714  23.10.2015 101.95        S
+## 750  05.10.2013  98.24        J
+## 784  29.09.2012  96.70        J
+## 822  22.09.2017  95.03        J
+## 845  11.09.2015  93.52        J
+## 1142 21.09.2012  73.84        J
+## 1183 30.09.2011  70.75        J
+## 1284 16.10.2009  52.52        J
+## 1293 08.10.2004  49.54        J
+## 1307 28.02.2005  41.34        J
+</code></pre>
+<p>As my friend warned me, Figure Skating is not really the national sport,
+they have yet to win a medal in the Olympics in this discipline but they
+do have a number of juniors that could provide an interesting suprise in
+a senior category. I havent&rsquo; really studied this category yet but if
+you&rsquo;re interested in turkish figure skating they are bringing the ice
+dancing couple Alisa Agafonova / Alper Uçar.</p>
+<h1 id="average-personal-best-scores-per-country">Average Personal Best scores per country</h1>
+<p>Let&rsquo;s look at the top 10 countries with best average PB:</p>
+<pre><code>##    NationID mean_value
+## 60      RUS   161.5981
+## 35      JPN   152.4915
+## 73      USA   147.2498
+## 12      CAN   129.0514
+## 38      KOR   126.5404
+## 67      SWE   124.7574
+## 13      CHN   124.5560
+## 34      ITA   119.2320
+## 21      FRA   118.2176
+## 24      GER   116.3685
+
+##    NationID mean_value
+## 49      RUS   194.9438
+## 6       BEL   187.8933
+## 60      USA   186.8308
+## 12      CHN   185.5706
+## 31      JPN   181.2509
+## 19      FRA   172.8991
+## 11      CAN   171.9211
+## 52      SRB   170.6200
+## 21      GEO   170.2317
+## 39      MON   167.8100
+</code></pre>
+<p>Russia is well above any other country both in ladies&rsquo; and men&rsquo;s events,
+as expected. But below that there is a difference between the two
+events: in ladies&rsquo; Japan is second, and to my surprise USA is actually
+3rd, so they&rsquo;re not that bad after all. In men&rsquo;s events, Belarus is
+second and again USA is third. In both events France is in the top 10,
+it could be worse, and it looks like our men&rsquo;s events are better. China
+is also in both top tens, their artistic component is really good.
+Canada is also in both lists although I expected them to be higher up
+than fourth and seventh respectively. Italy is in the ladies top ten
+but not in the men top 10. Other countries I don&rsquo;t know so much about in this
+sport and were a bit of a surprise.</p>
+<h1 id="rank-vs-score-plot">Rank vs score plot</h1>
+<p>Now we have a pretty good idea of the countries that usually come on
+top but let&rsquo;s focus on the athletes rather than their countries now and
+look at the plot of scores and ranks:</p>
+<p><img src="../Personal_best_figure_skating_files/figure-markdown_strict/unnamed-chunk-4-1.png" alt=""></p>
+<p>The plot of rank according to score is interesting, it is a sigmoid. It
+shows a huge chunk of competitive athletes in the middle where the drop
+in rank and score is more linear. On the right side lower in the ranks,
+the scores tend to drop really fast under 50 points. On the left side up
+in the ranks, above 150 the scores become exponentially higher.</p>
+<h1 id="a-linear-regression-model-to-predict-the-rank-according-to-the-score">A linear regression model to predict the rank according to the score</h1>
+<p>Let&rsquo;s build a very simple regression
+model which will work in the middle part of the plot. Regression models,
+are a way to predict given a value of
+rank here, the corresponding score. The reason this is interesting here,
+is say I am rank 601 overall in the world for PB and I want to know what
+score I will need to have to be rank 600 (come up a rank). This
+regression model will tell you, which doesn&rsquo;t make you better at
+skating, but can help you understand what kind of an effort you need to
+put in to do that. So this model doesn&rsquo;t take into
+account the fact that towards the ends of the plot it is no longer
+linear, so it is not perfect, but it is a model. Let&rsquo;s see how good it
+is:</p>
+<pre><code>## 
+## Call:
+## lm(formula = Score ~ rank, data = ISU_ladies_df)
+## 
+## Coefficients:
+## (Intercept)         rank  
+##    175.2582      -0.1018
+
+## (Intercept)        rank 
+## 175.2582253  -0.1018119
+
+## [1] &quot;Predicted Score with rank 601: 114.069277725803&quot;
+
+## [1] &quot;Predicted Score with rank 600: 114.171089618544&quot;
+</code></pre>
+<p>So if I am rank 601 according to the model my score is
+114.069277725803 and if I want to jump to rank 600 I have to have a
+score of 114.171089618544 so I want to add 0.1018119. But let&rsquo;s see how
+good our model is by pulling up the actual numbers:</p>
+<pre><code>## [1] &quot;Actual Score with rank 601: 108.77&quot;
+
+## [1] &quot;Actual Score with rank 600: 108.86&quot;
+</code></pre>
+<p>The model as expected is not perfect but the difference to get from one
+rank to the other in reality is 0.09. Let&rsquo;s try to make it a little
+better!</p>
+<h1 id="building-a-better-model-using-only-the-linear-part-of-the-plot">Building a better model using only the linear part of the plot</h1>
+<p>We will subset only the part of the plot that is pretty linear and
+remove those extreme values at the ends and use the same commands as
+before on that subset.</p>
+<p><img src="../Personal_best_figure_skating_files/figure-markdown_strict/unnamed-chunk-7-1.png" alt=""></p>
+<pre><code>## 
+## Call:
+## lm(formula = Score ~ rank, data = new_model_df)
+## 
+## Coefficients:
+## (Intercept)         rank  
+##   161.95347     -0.08542
+
+##  (Intercept)         rank 
+## 161.95347226  -0.08541764
+
+## [1] &quot;Predicted Score with rank 601: 110.617471176053&quot;
+
+## [1] &quot;Predicted Score with rank 600: 110.702888815125&quot;
+
+## [1] &quot;Actual Score with rank 601: 108.77&quot;
+
+## [1] &quot;Actual Score with rank 600: 108.86&quot;
+</code></pre>
+<p>That&rsquo;s much better! the difference to get from one rank to the other in
+reality is 0.09. The model still isn&rsquo;t perfect because the plot isnt&rsquo;
+completely linear.</p>
+<h2 id="testing-the-model-on-the-mens-data">Testing the model on the men&rsquo;s data</h2>
+<p>Let&rsquo;s do the same thing for the men&rsquo;s data:</p>
+<p><img src="Personal_best_figure_skating_files/figure-markdown_strict/unnamed-chunk-8-1.png" alt=""><img src="Personal_best_figure_skating_files/figure-markdown_strict/unnamed-chunk-8-2.png" alt=""></p>
+<pre><code>## 
+## Call:
+## lm(formula = Score ~ rank, data = men_model_df)
+## 
+## Coefficients:
+## (Intercept)         rank  
+##    219.9326      -0.1731
+
+## (Intercept)        rank 
+## 219.9325997  -0.1731332
+
+## [1] &quot;Predicted Score with rank 601: 115.879553288167&quot;
+
+## [1] &quot;Predicted Score with rank 600: 116.052686476926&quot;
+
+## [1] &quot;Actual Score with rank 601: 118.59&quot;
+
+## [1] &quot;Actual Score with rank 600: 118.65&quot;
+</code></pre>
+<p>For the men&rsquo;s data the difference to get from one rank to the other in
+reality is 0.06. It looks even better than in the ladie&rsquo;s data.</p>
+<p>There is lots more to do with this data but for today that&rsquo;s all.</p>
+<p>Sciathlete</p>
+<p>Here is the code for those interested in how I did this:</p>
+<pre><code>#loading libraries and reading data from ladies' and mens' events
+library(readODS)
+ISU_ladies_df &lt;- read_ods(&quot;ISU_events_PB_ladies.ods&quot;)
+ISU_men_df &lt;- read_ods(&quot;ISU_events_PB_men.ods&quot;)
+#showing the first six rows of the dataframes
+head(ISU_ladies_df)
+head (ISU_men_df)
+#subsetting the athletes from turkey
+athletes_turkey &lt;- ISU_ladies_df[ISU_ladies_df$NationID == &quot;TUR&quot;,]
+athletes_turkey
+#calculating the mean score values and showing the first 10 values
+library(plyr)
+score_nations_ladies &lt;- ddply(ISU_ladies_df, .(NationID), summarize, mean_value = mean(Score))
+score_nations_ladies &lt;- score_nations_ladies[order(-score_nations_ladies$mean_value),]
+head(score_nations_ladies, n=10)
+score_nations_men &lt;- ddply(ISU_men_df, .(NationID), summarize, mean_value = mean(Score))
+score_nations_men &lt;- score_nations_men[order(-score_nations_men$mean_value),]
+head(score_nations_men, n=10)
+#generating the ladies plot
+plot(ISU_ladies_df$Score, main=&quot;Score vs rank in Ladie's event&quot;, xlab=&quot;World rank of personal best&quot;, ylab=&quot;Personal best score&quot;)
+#calculating the coefficients and predictions
+scores.lm = lm(Score ~ rank, data=ISU_ladies_df)
+scores.lm
+coeffs = coefficients(scores.lm)
+coeffs
+pred_601 = data.frame(rank=601)
+#looking up the actual values and comparing them
+real_score_601 &lt;- predict(scores.lm, pred_601)
+print(paste0(&quot;Predicted Score with rank 601: &quot;, real_score_601))
+pred_600 = data.frame(rank=600)
+real_score_600 &lt;- predict(scores.lm, pred_600)
+print(paste0(&quot;Predicted Score with rank 600: &quot;, real_score_600))
+real_score_601 &lt;- ISU_ladies_df[ISU_ladies_df$rank == 601,]$Score
+real_score_600 &lt;- ISU_ladies_df[ISU_ladies_df$rank == 600,]$Score
+print(paste0(&quot;Actual Score with rank 601: &quot;, real_score_601))
+print(paste0(&quot;Actual Score with rank 600: &quot;, real_score_600))
+#calculating the new model with only the linear part of the plot
+new_model_df &lt;- ISU_ladies_df[(ISU_ladies_df$rank &lt; 1000 &amp; ISU_ladies_df$rank &gt; 175),]
+plot(new_model_df$Score, main=&quot;Score vs rank in Ladie's event in linear part&quot;, xlab=&quot;World rank of personal best&quot;, ylab=&quot;Personal best score&quot;)
+scores.lm = lm(Score ~ rank, data=new_model_df)
+scores.lm
+coeffs = coefficients(scores.lm)
+coeffs
+pred_601 = data.frame(rank=601)
+real_score_601 &lt;- predict(scores.lm, pred_601)
+print(paste0(&quot;Predicted Score with rank 601: &quot;, real_score_601))
+pred_600 = data.frame(rank=600)
+real_score_600 &lt;- predict(scores.lm, pred_600)
+print(paste0(&quot;Predicted Score with rank 600: &quot;, real_score_600))
+real_score_601 &lt;- ISU_ladies_df[ISU_ladies_df$rank == 601,]$Score
+real_score_600 &lt;- ISU_ladies_df[ISU_ladies_df$rank == 600,]$Score
+print(paste0(&quot;Actual Score with rank 601: &quot;, real_score_601))
+print(paste0(&quot;Actual Score with rank 600: &quot;, real_score_600))
+#applying the new model to the men's data
+plot(ISU_men_df$Score, main=&quot;Score vs rank in Men's event&quot;, xlab=&quot;World rank of personal best&quot;, ylab=&quot;Personal best score&quot;)
+men_model_df &lt;- ISU_men_df[(ISU_men_df$rank &lt; 750 &amp; ISU_men_df$rank &gt; 175),]
+plot(men_model_df$Score, main=&quot;Score vs rank in Men's event in linear part&quot;, xlab=&quot;World rank of personal best&quot;, ylab=&quot;Personal best score&quot;)
+scores.lm = lm(Score ~ rank, data=men_model_df)
+scores.lm
+coeffs = coefficients(scores.lm)
+coeffs
+pred_601 = data.frame(rank=601)
+real_score_601 &lt;- predict(scores.lm, pred_601)
+print(paste0(&quot;Predicted Score with rank 601: &quot;, real_score_601))
+pred_600 = data.frame(rank=600)
+real_score_600 &lt;- predict(scores.lm, pred_600)
+print(paste0(&quot;Predicted Score with rank 600: &quot;, real_score_600))
+real_score_601 &lt;- ISU_men_df[ISU_men_df$rank == 601,]$Score
+real_score_600 &lt;- ISU_men_df[ISU_men_df$rank == 600,]$Score
+
+print(paste0(&quot;Actual Score with rank 601: &quot;, real_score_601))
+print(paste0(&quot;Actual Score with rank 600: &quot;, real_score_600))
+</code></pre>
+
+
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=https%3a%2f%2fsciathlon.github.io%2fpost%2fpersonal_best_figure_skating%2f&amp;text=Figure%20skating%20athletes%27%20personal%20best&amp;via=" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsciathlon.github.io%2fpost%2fpersonal_best_figure_skating%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=https%3a%2f%2fsciathlon.github.io%2fpost%2fpersonal_best_figure_skating%2f&amp;title=Figure%20skating%20athletes%27%20personal%20best" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fsciathlon.github.io%2fpost%2fpersonal_best_figure_skating%2f&amp;title=Figure%20skating%20athletes%27%20personal%20best" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fsciathlon.github.io%2fpost%2fpersonal_best_figure_skating%2f&amp;title=Figure%20skating%20athletes%27%20personal%20best" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fsciathlon.github.io%2fpost%2fpersonal_best_figure_skating%2f&amp;description=Figure%20skating%20athletes%27%20personal%20best" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://sciathlon.github.io/post/analysis_medal_per_athlete/" data-toggle="tooltip" data-placement="top" title="R figure skating analysis">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://sciathlon.github.io/post/triathlon_pubmed_analysis/" data-toggle="tooltip" data-placement="top" title="Triathlon pubmed analysis">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+		
+		  <a href="mailto:sciathlonblog@gmail.com" title="Email me">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://github.com/Sciathlon" title="GitHub">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2023
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://sciathlon.github.io/">Sciathlon</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.111.3</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js" integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha384-w5y/xIeYixWvfM+A1cEbmHPURnvyqmVg5eVENruEdDjcyRLUSNej7512JQGspFUr" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+<script src="https://sciathlon.github.io/js/main.js"></script>
+<script src="https://sciathlon.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://sciathlon.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

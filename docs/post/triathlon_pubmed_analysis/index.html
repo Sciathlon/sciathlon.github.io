@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+ 
+
+
+      <title>Triathlon pubmed analysis - </title>
+
+  <meta name="description" content="Today I am using the RISmed package for R to analyze publications about triathlon. It is an amazing package to look through the Pubmed database for what they have on a certain subject. Pubmed is a NIH (USA) funded database which hosts articles about medicine and biology. Today, I am looking at studies that have been done on injuries, disease and human physiology that have to do with triathlon. I am not a triathlete yet, I am just focusing on running this year but it is on my radar."><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Sciathlon",
+    
+    "url": "https:\/\/sciathlon.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/sciathlon.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/sciathlon.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/sciathlon.github.io\/post\/triathlon_pubmed_analysis\/",
+          "name": "Triathlon pubmed analysis"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : ""
+  },
+  "headline": "Triathlon pubmed analysis",
+  "description" : "Today I am using the RISmed package for R to analyze publications about triathlon. It is an amazing package to look through the Pubmed database for what they have on a certain subject. Pubmed is a NIH (USA) funded database which hosts articles about medicine and biology. Today, I am looking at studies that have been done on injuries, disease and human physiology that have to do with triathlon. I am not a triathlete yet, I am just focusing on running this year but it is on my radar.",
+  "inLanguage" : "en",
+  "wordCount":  1738 ,
+  "datePublished" : "2018-02-02T20:32:34",
+  "dateModified" : "2018-02-02T20:32:34",
+  "image" : "https:\/\/sciathlon.github.io\/img\/avatar-icon.png",
+  "keywords" : [ "" ],
+  "mainEntityOfPage" : "https:\/\/sciathlon.github.io\/post\/triathlon_pubmed_analysis\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/sciathlon.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/sciathlon.github.io\/img\/avatar-icon.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Triathlon pubmed analysis" />
+<meta property="og:description" content="Today I am using the RISmed package for R to analyze publications about triathlon. It is an amazing package to look through the Pubmed database for what they have on a certain subject. Pubmed is a NIH (USA) funded database which hosts articles about medicine and biology. Today, I am looking at studies that have been done on injuries, disease and human physiology that have to do with triathlon. I am not a triathlete yet, I am just focusing on running this year but it is on my radar.">
+<meta property="og:image" content="https://sciathlon.github.io/img/avatar-icon.png" />
+<meta property="og:url" content="https://sciathlon.github.io/post/triathlon_pubmed_analysis/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Sciathlon" />
+
+  <meta name="twitter:title" content="Triathlon pubmed analysis" />
+  <meta name="twitter:description" content="Today I am using the RISmed package for R to analyze publications about triathlon. It is an amazing package to look through the Pubmed database for what they have on a certain subject. Pubmed is a NIH …">
+  <meta name="twitter:image" content="https://sciathlon.github.io/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link href='https://sciathlon.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.111.3">
+  <link rel="alternate" href="https://sciathlon.github.io/index.xml" type="application/rss+xml" title="Sciathlon"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"><link rel="stylesheet" href="https://sciathlon.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://sciathlon.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://sciathlon.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-119123667-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://sciathlon.github.io/">Sciathlon</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">Samples</a>
+              <div class="navlinks-children">
+                
+                  <a href="/post/2017-03-07-bigimg-sample">Big Image Sample</a>
+                
+                  <a href="/post/2017-03-05-math-sample">Math Sample</a>
+                
+                  <a href="/post/2016-03-08-code-sample">Code Sample</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Sciathlon" href="https://sciathlon.github.io/">
+            <img class="avatar-img" src="https://sciathlon.github.io/img/avatar-icon.png" alt="Sciathlon" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Triathlon pubmed analysis</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on February 2, 2018
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;9&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1738&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>Today I am using the RISmed package for R to analyze publications about triathlon.
+It is an amazing package to look through the Pubmed database for what they have on a certain subject. Pubmed is a NIH (USA)
+funded database which hosts articles about medicine and biology. Today, I am
+looking at studies that have been done on injuries, disease and human
+physiology that have to do with triathlon. I am not a triathlete yet, I
+am just focusing on running this year but it is on my radar. I cycle to commute to the lab and swim
+as cross training every once in a while. I am planning on starting
+with a duathlon this summer and maybe casual triathlons next year. I use the Pubmed database
+every day for work, and I am very curious to know what has been done for
+triathletes specifically, so let&rsquo;s jump right into it!</p>
+<h1 id="number-of-publications-containing-the-word-triathlon-from-2000-2017">Number of publications containing the word &ldquo;triathlon&rdquo; from 2000-2017</h1>
+<p>There are 596 publications on the pubmed database total between the
+years 2000 and 2017 about triathlon. Let&rsquo;s see if the number of
+publications was stable over the years, with some stats first and a plot
+of the number of publications according to the year:</p>
+<p><img src="../triathlon_pubmed_analysis_files/figure-markdown_strict/unnamed-chunk-2-1.png" alt=""></p>
+<p>The graph doesn&rsquo;t go all the way back to 2000 because I reached the limit for number of publications I set.
+On the graph, we can see that 13 years ago there weren&rsquo;t many publications about
+triathlon but their number increased tenfold after that despite a
+decrease in 2008 that might have been due to the financial crisis. In
+2012 the number reached a pic and has been pretty stable since at around
+50 publications a year. The number of triathletes around the world has
+been increasing over the years and it is good that the interest in the
+sport has carried on to research publications.</p>
+<h1 id="what-are-the-studies-about-in-triathlon">What are the studies about in triathlon?</h1>
+<h2 id="most-used-words-in-the-abstracts">Most used words in the abstracts</h2>
+<p>We are now going to look at the 10 most used words in abstracts over the
+years in the table below in different years:</p>
+<!-- raw HTML omitted -->
+<p>The same words don&rsquo;t always come up every year. Some words don&rsquo;t give us
+much information like &ldquo;triathlon&rdquo; and &ldquo;subsequent&rdquo;.The words that
+interest me are related to biology and medicine, there is &ldquo;artery&rdquo; so
+there is an interest in vascular system of endurance athletes, &ldquo;p&rdquo; for
+p-value in statistics, &ldquo;mass&rdquo; so there were studies that probably look
+at mass body index or muscle/fat mass, and there is also &ldquo;age&rdquo;, so there
+must be studies that compare age of triathletes. The phase of a
+triathlon race that comes up most is cycling interestingly, so it might
+be what some scientists consider easier to study or a more important
+part in the race. A lot of the words do come up in the top ten a few
+times, and I am curious to see the evolution of the use of some words,
+so let&rsquo;s pull it up right now:</p>
+<p><img src="../triathlon_pubmed_analysis_files/figure-markdown_strict/unnamed-chunk-4-1.png" alt="">
+<img src="../triathlon_pubmed_analysis_files/figure-markdown_strict/unnamed-chunk-4-2.png" alt=""></p>
+<p>I&rsquo;ve drawn two plots here, one where there is simply the frequency of
+the use of the top 5 words in abstracts about triathlon of each year,
+and the other one is the frequency normalized to the number of
+publications. The two plots look drastically different.</p>
+<ul>
+<li>
+<p>The first plot shows mostly increase in the words generally, with a
+decrease in 2008 because of the decrease in publications, and then
+another decrease in 2016, probably meaning the top words have just
+shifted to new uses.</p>
+</li>
+<li>
+<p>The second plot shows that there are some words that are present
+either in more than 1 publication or mentioned several times in the
+abstract, their normalized frequency is higher than 1 like &ldquo;p&rdquo; for
+p-value (statistics), &ldquo;performance&rdquo;. The word &ldquo;cycling&rdquo; saw a huge
+drop in use over the years. &ldquo;Triathletes&rdquo; was rising slowly. Towards
+more recent years, we notice the same thing as in the first plot:
+the top words seem to not be used as much, probably in favor of new
+words and the word &ldquo;triathlon&rdquo; is being used more times per
+abstract.</p>
+</li>
+</ul>
+<h2 id="most-used-words-in-the-titles">Most used words in the titles</h2>
+<p>The title gives a different perspective on the subject because it will
+be straight to the point of the article and will have less words that
+are not telling us really what the study is about.</p>
+<!-- raw HTML omitted -->
+<p>Now this is interesting: the only body part in the top 20 words used in
+titles of articles mentionning triathlon is the knee. I am going to make
+the assumption that knee injuries have been studied most in triathlon
+based on this result. We also see ironman in there, but not sprint,
+olympic or half-ironman so this distance has probably been studied the
+most as well. Another interesting word is &ldquo;iron&rdquo;, which can either be used as &ldquo;iron man&rdquo;
+but it could be about red blood cells haeme in
+triathletes. To make sure we&rsquo;d have to spend a little more time looking through it, make
+sure you let me know if you would like that using my social media. We also see endurance and ultraendurance words there. The
+word elite also comes up a lot, which makes sense if most studies look
+at results from elite athletes rather than casual triathletes and age
+groupers. There is also &ldquo;muscle&rdquo; in the top 20 which I find interesting
+as well because it is not the biggest part of the training.</p>
+<h2 id="wordcloud">WordCloud</h2>
+<p><img src="../triathlon_pubmed_analysis_files/figure-markdown_strict/unnamed-chunk-6-1.png" alt=""></p>
+<p>So from this we get more words that pop up like sodium supplement,
+stress, arthroplasty, hawaii, oxid, which is starting to sound much more
+interesting! Now I wanted to look at the words most used in articles
+that talk about knees and triathlon so see what about the knees of
+triathletes interests researchers:</p>
+<!-- raw HTML omitted -->
+<h1 id="top-journals-that-publish-on-triathlon">Top journals that publish on triathlon</h1>
+<p><img src="../triathlon_pubmed_analysis_files/figure-markdown_strict/unnamed-chunk-8-1.png" alt=""></p>
+<p>The journal that publishes most on triathlon is the British Journal of
+Sports Medicine, which isn&rsquo;t too surprising as the UK are probably the
+most competitive country in triathlon at the moment. The rest of the top ten journals
+to publish in triathlon are also all about sports medicine, except one
+which is applied physiology. The top ten doesn&rsquo;t contain very high
+Impact factor journals, but this is not surprising either because these
+journals don&rsquo;t typically go for this type of publication and don&rsquo;t have
+a specific section dedicated to sports science.</p>
+<h1 id="top-authors-diversity-and-specialty">Top authors diversity and specialty</h1>
+<!-- raw HTML omitted -->
+<p>We pulled up the top five most publishing authors for the publications
+about triathlon and their number of publications on the table above.
+There are 1625 different authors with 1382 authors having only one
+publication and 243 authors having at least 2. There are a few authors
+in the top 5 that have published a lot on triathlon-related studies,
+let&rsquo;s take a closer look at the first two by doing a bit of research:</p>
+<ul>
+<li>
+<p>Dr. Beat Knechtle is a swiss MD and on <a href="https://www.researchgate.net/project/Pacing-in-endurance-athletes">Research
+gate</a>
+has 429 Research items, 25273 Reads, 5029 Citations so he is very
+prolific in the domain and he is also a triathlete and ultrarunner
+himself. You can learn more about him by listening to the
+<a href="http://www.scienceofultra.com/podcasts/50">ultraScience podcast episode
+50</a>, which is hosted by
+Dr. Shawn Bearden and is amazing.</p>
+</li>
+<li>
+<p>Dr. Thomas Rosemann is also an MD from Switzerland but his work is
+not entirely focused on endurance sports but he has contributed
+quite a bit to it. His research gate shows 591 Research items, 38211
+Reads, 12816 Citations.</p>
+</li>
+<li>
+<p>Dr. Rüst CA, after a little search on pubmed is found often on the
+same papers as one or both of the scientists above, he works at the
+same institute in Zurich as Dr. Thomas Rosemann and his researchGate
+shows 193 Research items, 10830 Reads and 2068 Citations.</p>
+</li>
+<li>
+<p>Dr. Lepers R is an INSERM researcher and teaches in France at
+University Bourgogne Franche-Comté and has done a lot of work on
+exercize-related fatigue; his researchgate shows 247 Research items,
+29350 Reads and 5181 Citations.</p>
+</li>
+<li>
+<p>Dr. Patrizia Knechtle, I&rsquo;m guessing related to or married to the
+first author on the list, I couldn&rsquo;t find much info on her, she is
+on a lot of the same papers as him.</p>
+</li>
+</ul>
+<p>All of these top authors publishing on triathlon work in Europe, mostly
+Switzerland, so there must be a high interest in endurance sports there.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>This little study on how triathlon is being studied by researchers
+specifically in the domain of biology and medicine using the Pubmed
+database showed that the focus is mostly on knee injuries. The journals
+that publish this kind of study are mostly sports medicine and sports
+science dedicated journals rather than more general physiology journals.
+The most prolific labs and researchers are in Europe, specifically
+Switzerland, and most publish closely together.</p>
+<p>For those interested in the code I used it is down below. I hope this
+was entertaining and informative, see you next time!</p>
+<p>Sciathlete</p>
+<pre><code>library(RISmed)
+subject &lt;- &quot;triathlon&quot;
+res &lt;- EUtilsSummary(subject, type=&quot;esearch&quot;, db=&quot;pubmed&quot;, datetype='pdat', mindate=2000, maxdate=2017, retmax=500)
+fetch &lt;- EUtilsGet(res)
+y &lt;- YearPubmed(fetch)
+summary(y)
+plot(table(y), type = &quot;l&quot;, main=&quot;Number of publications about triathlon per year&quot;, xlab = &quot;Year of publication&quot;, ylab=&quot;Number of publications about triathlon&quot;)
+library(qdap)
+library(knitr)
+library(ggplot2)
+myFunc&lt;-function(year){
+articles1&lt;-data.frame('Abstract'=AbstractText(fetch), 'Year'=YearPubmed(fetch))
+abstracts1&lt;-articles1[which(articles1$Year==year),]
+abstracts1&lt;-data.frame(abstracts1)
+abstractsOnly&lt;-as.character(abstracts1$Abstract)
+abstractsOnly&lt;-paste(abstractsOnly, sep=&quot;&quot;, collapse=&quot;&quot;)
+abstractsOnly&lt;-as.vector(abstractsOnly)
+abstractsOnly&lt;-strip(abstractsOnly)
+stsp&lt;-rm_stopwords(abstractsOnly, stopwords = qdapDictionaries::Top100Words)
+ord &lt;- data.frame(table(stsp))
+ord&lt;-ord[order(ord$Freq, decreasing=TRUE),]
+ord &lt;- head(ord,10)
+ord &lt;- data.frame('year'= rep.int(year, 10), 'words'= ord$stsp, 'freq' = ord$Freq)
+}
+ofive &lt;- myFunc(2005)
+oseven &lt;- myFunc(2007)
+oeight &lt;- myFunc(2008)
+otwelve &lt;- myFunc(2012)
+osixteen&lt;-myFunc(2016)
+oseventeen&lt;-myFunc(2017)
+all&lt;-rbind(ofive, oseven, oeight, otwelve, osixteen, oseventeen)
+tble &lt;- cbind(ofive, oseven, oeight, otwelve, osixteen, oseventeen)
+kable(tble)
+n_occur &lt;- data.frame(table(all$words))
+n_occur2 &lt;- n_occur[n_occur$Freq &gt; 2,]
+set &lt;- all[is.element(all$words, n_occur2$Var1),]
+ggplot(set, aes(x=year, y=freq, colour=words)) + geom_line() 
+titles1&lt;-data.frame('Title'=ArticleTitle(fetch), 'Year'=YearPubmed(fetch))
+abstractsOnly&lt;-as.character(titles1$Title)
+abstractsOnly&lt;-paste(abstractsOnly, sep=&quot;&quot;, collapse=&quot;&quot;)
+abstractsOnly&lt;-as.vector(abstractsOnly)
+abstractsOnly&lt;-strip(abstractsOnly)
+stsp&lt;-rm_stopwords(abstractsOnly, stopwords = qdapDictionaries::Top100Words)
+ordtitles&lt;-as.data.frame(table(stsp))
+ordtitles&lt;-ordtitles[order(ordtitles$Freq, decreasing=TRUE),]
+kable(head(ordtitles,20))
+library(tm)
+library(SnowballC)
+library(wordcloud)
+library(qdap)
+abstractWords &lt;- abstractsOnly
+abstractWordsCorpus &lt;- Corpus(VectorSource(abstractWords))
+abstractWordsCorpus &lt;- tm_map(abstractWordsCorpus, PlainTextDocument)
+abstractWordsCorpus &lt;- tm_map(abstractWordsCorpus, removePunctuation)
+abstractWordsCorpus &lt;- tm_map(abstractWordsCorpus, removeWords, stopwords('english'))
+abstractWordsCorpus &lt;- tm_map(abstractWordsCorpus, stemDocument)
+abstractWordsCorpus &lt;- tm_map(abstractWordsCorpus, removeWords, c('the', 'this', stopwords('english')))
+wordcloud(abstractWordsCorpus, max.words = 100, random.order = FALSE)
+articles &lt;- as.data.frame(titles1, stringsAsFactors=FALSE)
+titleWords &lt;- NULL
+for(i in 1:nrow(articles)){
+  if(!is.na(titles1$Title[i])){
+    if(gregexpr('knee', as.character(titles1$Title[i]), ignore.case = TRUE)[[1]][1]!=-1){
+    titleWords &lt;- c(titleWords, titles1$Title[i])
+    }
+  }
+}
+library(qdap)
+kneeTitles &lt;- data.frame('Titles'=articles$Title[titleWords])
+abstractsOnly &lt;- as.character(kneeTitles$Title)
+abstractsOnly &lt;- paste(abstractsOnly, sep=&quot;&quot;, collapse=&quot;&quot;)
+abstractsOnly &lt;- as.vector(abstractsOnly)
+abstractsOnly &lt;- strip(abstractsOnly)
+stsp&lt;-rm_stopwords(abstractsOnly, stopwords = qdapDictionaries::Top100Words)
+ord&lt;-as.data.frame(table(stsp))
+ord&lt;-ord[order(ord$Freq, decreasing=TRUE),]
+kable(head(ord,40))
+journal &lt;- MedlineTA(fetch)
+jnltble &lt;- data.frame(table(journal))
+journal_count &lt;- data.frame('journal' = jnltble$journal, 'number' = jnltble$Freq)
+journal_count_top10 &lt;- journal_count[order(-journal_count[,2]),][1:10,]
+ggplot(journal_count_top10, aes(x=journal, y=number, fill=journal)) + geom_bar(position=&quot;dodge&quot;,stat=&quot;identity&quot;)+
+  theme(axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank())
+auths&lt;-Author(fetch) # creates lists of authors
+Last&lt;-sapply(auths, function(x)paste(x$LastName, x$Initials, sep=&quot; &quot;))
+auths2&lt;-as.data.frame(sort(table(unlist(Last)), dec=TRUE))
+names(auths2)&lt;-c(&quot;name&quot;, &quot;number of publications&quot;)
+kable(head(auths2, 5))
+</code></pre>
+
+
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=https%3a%2f%2fsciathlon.github.io%2fpost%2ftriathlon_pubmed_analysis%2f&amp;text=Triathlon%20pubmed%20analysis&amp;via=" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsciathlon.github.io%2fpost%2ftriathlon_pubmed_analysis%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=https%3a%2f%2fsciathlon.github.io%2fpost%2ftriathlon_pubmed_analysis%2f&amp;title=Triathlon%20pubmed%20analysis" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fsciathlon.github.io%2fpost%2ftriathlon_pubmed_analysis%2f&amp;title=Triathlon%20pubmed%20analysis" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fsciathlon.github.io%2fpost%2ftriathlon_pubmed_analysis%2f&amp;title=Triathlon%20pubmed%20analysis" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fsciathlon.github.io%2fpost%2ftriathlon_pubmed_analysis%2f&amp;description=Triathlon%20pubmed%20analysis" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://sciathlon.github.io/post/personal_best_figure_skating/" data-toggle="tooltip" data-placement="top" title="Figure skating athletes&#39; personal best">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://sciathlon.github.io/post/biathlon_data_analysis/" data-toggle="tooltip" data-placement="top" title="Biathlon data analysis">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+		
+		  <a href="mailto:sciathlonblog@gmail.com" title="Email me">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://github.com/Sciathlon" title="GitHub">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2023
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://sciathlon.github.io/">Sciathlon</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.111.3</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js" integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha384-w5y/xIeYixWvfM+A1cEbmHPURnvyqmVg5eVENruEdDjcyRLUSNej7512JQGspFUr" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+<script src="https://sciathlon.github.io/js/main.js"></script>
+<script src="https://sciathlon.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://sciathlon.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

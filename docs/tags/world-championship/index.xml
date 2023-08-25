@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>World Championship on Sciathlon</title>
+    <link>https://sciathlon.github.io/tags/world-championship/</link>
+    <description>Recent content in World Championship on Sciathlon</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>sciathlonblog@gmail.com</managingEditor>
+    <webMaster>sciathlonblog@gmail.com</webMaster>
+    <lastBuildDate>Fri, 09 Feb 2018 22:25:58 +0100</lastBuildDate><atom:link href="https://sciathlon.github.io/tags/world-championship/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Biathlon data analysis</title>
+      <link>https://sciathlon.github.io/post/biathlon_data_analysis/</link>
+      <pubDate>Fri, 09 Feb 2018 22:25:58 +0100</pubDate>
+      <author>sciathlonblog@gmail.com</author>
+      <guid>https://sciathlon.github.io/post/biathlon_data_analysis/</guid>
+      <description>This week I&amp;rsquo;m at a metabarcoding school in Norway, so it gets dark very early and I have time for another post. In honor of the 2018 Winter Olympics finally kicking off, I asked a friend of mine who loves sports what data he would be interested in seeing in the sports that are in the winter Olympics and he answered &amp;ldquo;biathlon.&amp;rdquo; I found a website that collects lots of data on the sport called biathlonresults.</description>
+    </item>
+    
+  </channel>
+</rss>

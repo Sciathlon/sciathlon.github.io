@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+ 
+
+
+      <title>Anaconda packages and environments for bioinformatics: a tutorial - </title>
+
+  <meta name="description" content="After abandoning this blog for several years I am back with different content. I want to write tutorials on what I&rsquo;ve learned doing bioinformatics since I started my PhD, among other things and might be interesting or helpful to others. I started using anaconda during my postdoc in genomics and I use it every single day.
+Today, I wanted to write a summary of things I&rsquo;ve learned using anaconda packages and environments for bioinformatics (but the same commands will work for other types of packages as well)."><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Sciathlon",
+    
+    "url": "https:\/\/sciathlon.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/sciathlon.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/sciathlon.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/sciathlon.github.io\/post\/anacondatutorialblog\/",
+          "name": "Anaconda packages and environments for bioinformatics a tutorial"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : ""
+  },
+  "headline": "Anaconda packages and environments for bioinformatics: a tutorial",
+  "description" : "After abandoning this blog for several years I am back with different content. I want to write tutorials on what I\u0026rsquo;ve learned doing bioinformatics since I started my PhD, among other things and might be interesting or helpful to others. I started using anaconda during my postdoc in genomics and I use it every single day.\nToday, I wanted to write a summary of things I\u0026rsquo;ve learned using anaconda packages and environments for bioinformatics (but the same commands will work for other types of packages as well).",
+  "inLanguage" : "en",
+  "wordCount":  1508 ,
+  "datePublished" : "2023-05-14T00:00:00",
+  "dateModified" : "2023-05-14T00:00:00",
+  "image" : "https:\/\/sciathlon.github.io\/img\/avatar-icon.png",
+  "keywords" : [ "Anaconda, Bioinformatics, Install, Software" ],
+  "mainEntityOfPage" : "https:\/\/sciathlon.github.io\/post\/anacondatutorialblog\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/sciathlon.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/sciathlon.github.io\/img\/avatar-icon.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Anaconda packages and environments for bioinformatics: a tutorial" />
+<meta property="og:description" content="After abandoning this blog for several years I am back with different content. I want to write tutorials on what I&rsquo;ve learned doing bioinformatics since I started my PhD, among other things and might be interesting or helpful to others. I started using anaconda during my postdoc in genomics and I use it every single day.
+Today, I wanted to write a summary of things I&rsquo;ve learned using anaconda packages and environments for bioinformatics (but the same commands will work for other types of packages as well).">
+<meta property="og:image" content="https://sciathlon.github.io/img/avatar-icon.png" />
+<meta property="og:url" content="https://sciathlon.github.io/post/anacondatutorialblog/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Sciathlon" />
+
+  <meta name="twitter:title" content="Anaconda packages and environments for bioinformatics: a tutorial" />
+  <meta name="twitter:description" content="After abandoning this blog for several years I am back with different content. I want to write tutorials on what I&rsquo;ve learned doing bioinformatics since I started my PhD, among other things and …">
+  <meta name="twitter:image" content="https://sciathlon.github.io/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link href='https://sciathlon.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.111.3">
+  <link rel="alternate" href="https://sciathlon.github.io/index.xml" type="application/rss+xml" title="Sciathlon"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"><link rel="stylesheet" href="https://sciathlon.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://sciathlon.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://sciathlon.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-119123667-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://sciathlon.github.io/">Sciathlon</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">Samples</a>
+              <div class="navlinks-children">
+                
+                  <a href="/post/2017-03-07-bigimg-sample">Big Image Sample</a>
+                
+                  <a href="/post/2017-03-05-math-sample">Math Sample</a>
+                
+                  <a href="/post/2016-03-08-code-sample">Code Sample</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Sciathlon" href="https://sciathlon.github.io/">
+            <img class="avatar-img" src="https://sciathlon.github.io/img/avatar-icon.png" alt="Sciathlon" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Anaconda packages and environments for bioinformatics: a tutorial</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on May 14, 2023
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;8&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1508&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>After abandoning this blog for several years I am back with different
+content. I want to write tutorials on what I&rsquo;ve learned doing
+bioinformatics since I started my PhD, among other things and might be
+interesting or helpful to others. I started using anaconda during my
+postdoc in genomics and I use it every single day.</p>
+<p>Today, I wanted to write a summary of things I&rsquo;ve learned using anaconda
+packages and environments for bioinformatics (but the same commands will
+work for other types of packages as well). This is not a python tutorial
+though. What I will show is information already available online, but it
+is a compilation of what I found useful over the years in my day to day
+work so it may save someone some time. There are quite a few things I&rsquo;ve
+learned in the past year that I wish I had known when I started, so here
+they are.</p>
+<h1 id="what-is-anaconda-">What is Anaconda ?</h1>
+<p>Anaconda is a distribution of python that was first introduced to create
+a platform for python data science open source packages and libraries.
+You can find more information about the company here:
+<a href="https://www.anaconda.com/about-us">https://www.anaconda.com/about-us</a> . It simplifies package deployment
+and management when you are doing dev, but it is also a source for so
+many of the tools we use in bioinformatics and avoids the annoyingly
+complex installs of the dozens to hundreds of tools we need to use for
+our work. Not every single tool is installed there, and some distros are
+not up to date or have issues (looking at you Augustus, you
+headache-making demon) but most of the time it will save you hours to
+days of problems.</p>
+<h1 id="why-use-anaconda-">Why use Anaconda ?</h1>
+<ul>
+<li>You use it to install tools for data science including
+bioinformatics</li>
+<li>It works on Windows, Linux, MacOS</li>
+<li>It will avoid countless hours of install nightmares</li>
+<li>You can use it to create separate environments so you don&rsquo;t have
+conflicts between versions of dependencies</li>
+<li>It is super easy to install and use</li>
+<li>It has most of your bioinformatics software needs</li>
+<li>If you install the GUI, it comes with the Spyder IDE, which is my
+favorite if you code in python</li>
+<li>The community is amazing!</li>
+</ul>
+<p>Additional info from the company here:
+<a href="https://www.anaconda.com/why-anaconda">https://www.anaconda.com/why-anaconda</a> .</p>
+<h1 id="what-are-some-of-the-issues-i-need-to-be-aware-of-">What are some of the issues I need to be aware of ?</h1>
+<ul>
+<li>As I mentioned before, not every single soft you need is installed
+on it. For example in genomics, you can&rsquo;t install genemarkES or
+signalp6 with it because of the licensing.</li>
+<li>Some software versions don&rsquo;t work anymore because of dependencies
+that are broken or incompatible</li>
+<li>Less and less people seem to be relying on conda packages now and
+updating their packages because more and more people use Docker or
+Singularity images (but those are so annoying to setup sometimes!)</li>
+<li>Anaconda vs miniconda (see below)</li>
+<li>Some clusters don&rsquo;t have them, depending on your university or lab,
+because they can introduce safety liabilities. Many admins ban them
+(If they are angels and install all the tools we need themselves I&rsquo;m
+ok with it, but generally it makes my life more difficult!)</li>
+<li>if you use conda instead of mamba it can take absolute ages to
+download and install (see below)</li>
+</ul>
+<h1 id="conda-install-and-most-useful-commands">Conda install and most useful commands</h1>
+<h2 id="install-conda-on-your-server-or-local-machine">Install conda on your server or local machine</h2>
+<p>If you&rsquo;re not using the command line (which you shall remedy asap if
+it&rsquo;s the case, because learning how to use it is fast and it will serve
+you for the rest of your career so might as well get it over with now!)
+you can find the distro here in the meantime which will install the
+Anaconda distro of python you can use on the command line along with the
+Spyder IDE if you&rsquo;re a GUI only:
+<a href="https://www.anaconda.com/download#downloads">https://www.anaconda.com/download#downloads</a></p>
+<p>If you are using the command line:</p>
+<ul>
+<li>On Windows I would advise you use either the command line from the
+WSL (Windows linux subsystem, you&rsquo;ll find plenty of tutorials online
+for your distro of Windows) or download git bash command line tool
+here: <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a> . I use both, I always loved
+the git bash one though. Then follow instructions below.</li>
+<li>On Unix/Windows bash or WSL</li>
+</ul>
+<p>The first thing you need to know about using conda is that unless you
+have a very good reason, don&rsquo;t download anaconda but use miniconda
+instead. It will save you from annoying headaches of dependency
+incompatibilities, trust me.</p>
+<pre><code>#Download the newest install file (just replace the name of the file after checking which version you want in the command below)
+cd /path/to/where/you/want/to/install
+wget https://repo.anaconda.com/miniconda/Miniconda3-py310_22.11.1-1-Linux-x86_64.sh
+#install
+bash Miniconda3-py310_22.11.1-1-Linux-x86_64.sh
+</code></pre>
+<p>During the install it asks you if you want to add conda to your path,
+say yes. If something goes wrong you can do it using this:</p>
+<pre><code>export PATH=/path/to/miniconda/miniconda3/bin:$PATH
+
+#export will put the path during the current session only, if you want the path to always be available you need to put it in your bashrc like so:
+source ~.bashrc
+</code></pre>
+<p>Normally conda is initialized during install, but in case something goes
+wrong:</p>
+<pre><code>conda init
+</code></pre>
+<p>If you don&rsquo;t remember which version you installed if it&rsquo;s been a while:</p>
+<pre><code>conda --version
+</code></pre>
+<h2 id="installing-packages-and-creating-environments">Installing packages and creating environments</h2>
+<p>In this section I will indicate how to install conda packages and
+environments using the command line as well as some useful options and
+using examples of software I&rsquo;ve installed. Read the whole section before
+starting you installs!</p>
+<p>Before you do anything, install mamba in you base conda, it will speed
+up all your installs like you wouldn&rsquo;t believe and it&rsquo;s so much better
+for solving issues between dependencies.</p>
+<pre><code>conda install mamba -n base -c conda-forge
+</code></pre>
+<p>Installing a package in an existing environment (if you don&rsquo;t have one
+loaded it is going to be installed in base, and generally you don&rsquo;t want
+that, so be careful!):</p>
+<pre><code>mamba install -c channel_name package_name
+</code></pre>
+<p>Creating environments:</p>
+<pre><code>#Create a new environment with 1 or more packages
+mamba create  -n environment_name -c channel package_name1 package_name2 ...
+
+#Or if you don't have mamba:
+conda create  -n environment_name -c channel package_name1 package_name2 ...
+
+#Example with a single package:
+mamba create -n  busco -c conda-forge -c bioconda busco
+
+#Example with multiple packages:
+mamba create -n LongAssemb -c bioconda -c conda-forge -c defaults flye canu
+</code></pre>
+<p>Some installs are more complex and require a little more than that so
+you can create the environment then install software inside it (make
+sure you load the environment when you do!). Example with spades:</p>
+<pre><code>mamba create -n spades python
+conda activate spades
+pip install spades
+conda deactivate
+</code></pre>
+<p>An example of an even more complex install here with Trinity:</p>
+<pre><code>mamba create -n Trinity 
+conda activate Trinity
+mkdir softs/Trinity
+cd softs/Trinity
+wget https://github.com/trinityrnaseq/trinityrnaseq/releases/trinityrnaseq-v2.15.1.FULL.tar.gz
+tar -xvf  trinityrnaseq-v2.15.1.FULL.tar.gz
+make
+export TRINITY_HOME=/export/home/gaia/astewart/softs/Trinity/trinityrnaseq-v2.15.1
+mamba install --name Trinity  -c bioconda -c conda-forge samtools
+mamba install --name Trinity  -c bioconda -c conda-forge bowtie2
+mamba install --name Trinity  -c bioconda -c conda-forge jellyfish salmon
+mamba install --name Trinity -c conda-forge numpy
+</code></pre>
+<p>If you need specific versions of a software, specify it as so:</p>
+<pre><code>mamba create -n eukrep -c bioconda scikit-learn==0.19.2 eukrep
+</code></pre>
+<p>To save time add the -y option to say yes to installing all the
+dependencies</p>
+<pre><code> mamba create -y -n environment_name-c channel_name package_name
+</code></pre>
+<p>If ever you need to remove an environment and all the software in it:</p>
+<pre><code>conda env remove -n environment_name
+</code></pre>
+<p>Here I&rsquo;ve shown everything with python3 in mind but you can load python2
+in a separate environment:</p>
+<pre><code>conda create -n python2env python=2
+</code></pre>
+<h2 id="other-useful-commands">Other useful commands</h2>
+<p>To list all the packages installed in your conda:</p>
+<pre><code>conda list
+</code></pre>
+<p>To list all the environments installed in your conda:</p>
+<pre><code>conda env list
+</code></pre>
+<p>To search for all the available versions of a software:</p>
+<pre><code>conda search package_name
+</code></pre>
+<p>updata a version of a package (if inside an environment, activate it
+first):</p>
+<pre><code>conda update package_name
+</code></pre>
+<p>To update all packages in the env:</p>
+<pre><code>conda update --all
+</code></pre>
+<p>To update conda:</p>
+<pre><code>conda update -n base -c defaults conda 
+</code></pre>
+<p>For more info and commands see here:
+<a href="https://docs.conda.io/projects/conda/en/4.6.0/commands/info.html">https://docs.conda.io/projects/conda/en/4.6.0/commands/info.html</a></p>
+<h2 id="to-activate-environments-and-use-packages-installed-in-them">To activate environments and use packages installed in them</h2>
+<p>In the command line:</p>
+<pre><code>conda activate environment_name
+</code></pre>
+<p>In a script:</p>
+<pre><code>source /path/to/miniconda3/bin/activate environment_name
+</code></pre>
+<p>To deactivate the environment you are in:</p>
+<pre><code>conda deactivate
+</code></pre>
+<h2 id="to-remove-conda-install">To remove conda install</h2>
+<p>If you really need a clean install with nothing left you can use this:</p>
+<pre><code>conda install anaconda-clean
+anaconda-clean (--yes option if you want to remove everything and don't want to be prompted for every packages)
+</code></pre>
+<p>But if you don&rsquo;t require a clean uninstall just use this to remove the
+conda folder with all its contents:</p>
+<pre><code>rm -rf dir_name
+</code></pre>
+<h1 id="conclusion">Conclusion</h1>
+<p>Of course not everything is here, but most of what I&rsquo;ve needed or
+encountered is here. If you have trouble with anything, keep the reflex
+of googling your error message, and go from there. Only after you&rsquo;ve
+exhausted every relevant thread, you can try posting a question on
+StackOverflow <a href="https://stackoverflow.com/">https://stackoverflow.com/</a>, Anaconda forum
+<a href="https://community.anaconda.cloud/">https://community.anaconda.cloud/</a> or a similar community, I know there
+are discord servers where you can post as well. If you have colleagues,
+server admins or friends who you can ask it&rsquo;s even better=) Anyway, I
+hope this serves a purpose, at least for me it&rsquo;s a way to have
+everything in one place.
+Till next time, cheers,
+Sciathlon.</p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://sciathlon.github.io//tags/anaconda/">Anaconda</a>&nbsp;
+            
+              <a href="https://sciathlon.github.io//tags/bioinformatics/">Bioinformatics</a>&nbsp;
+            
+              <a href="https://sciathlon.github.io//tags/install/">Install</a>&nbsp;
+            
+              <a href="https://sciathlon.github.io//tags/software/">Software</a>&nbsp;
+            
+          </div>
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=https%3a%2f%2fsciathlon.github.io%2fpost%2fanacondatutorialblog%2f&amp;text=Anaconda%20packages%20and%20environments%20for%20bioinformatics%3a%20a%20tutorial&amp;via=" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsciathlon.github.io%2fpost%2fanacondatutorialblog%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=https%3a%2f%2fsciathlon.github.io%2fpost%2fanacondatutorialblog%2f&amp;title=Anaconda%20packages%20and%20environments%20for%20bioinformatics%3a%20a%20tutorial" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fsciathlon.github.io%2fpost%2fanacondatutorialblog%2f&amp;title=Anaconda%20packages%20and%20environments%20for%20bioinformatics%3a%20a%20tutorial" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fsciathlon.github.io%2fpost%2fanacondatutorialblog%2f&amp;title=Anaconda%20packages%20and%20environments%20for%20bioinformatics%3a%20a%20tutorial" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fsciathlon.github.io%2fpost%2fanacondatutorialblog%2f&amp;description=Anaconda%20packages%20and%20environments%20for%20bioinformatics%3a%20a%20tutorial" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/intalling_robitools/">How to install the Robitools</a></li>
+                
+              </ul>
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://sciathlon.github.io/post/athletesfoot/" data-toggle="tooltip" data-placement="top" title="Athlete&#39;s foot and its treatment">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://sciathlon.github.io/post/intalling_robitools/" data-toggle="tooltip" data-placement="top" title="How to install the Robitools">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+		
+		  <a href="mailto:sciathlonblog@gmail.com" title="Email me">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://github.com/Sciathlon" title="GitHub">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2023
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://sciathlon.github.io/">Sciathlon</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.111.3</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js" integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha384-w5y/xIeYixWvfM+A1cEbmHPURnvyqmVg5eVENruEdDjcyRLUSNej7512JQGspFUr" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+<script src="https://sciathlon.github.io/js/main.js"></script>
+<script src="https://sciathlon.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://sciathlon.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

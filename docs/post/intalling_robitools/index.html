@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+ 
+
+
+      <title>How to install the Robitools - </title>
+
+  <meta name="description" content="Introduction The OBITools are a set of tools meant to format, edit, filter and analyze environmental DNA (eDNA) next generation sequencing (NGS) data in the command line using bash. They were developed at the Laboratoire d&rsquo;Ecologie ALpine (LECA), in Grenoble, France. There are many other pipelines for metabarcoding data analysis, but if you choose these, so as long as you can format your files for the OBITools (a sometimes non-trivial task, I know&hellip;), they are fairly easy to get a handle on."><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Sciathlon",
+    
+    "url": "https:\/\/sciathlon.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/sciathlon.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/sciathlon.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/sciathlon.github.io\/post\/intalling_robitools\/",
+          "name": "How to install the robitools"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Sciathlon"
+  },
+  "headline": "How to install the Robitools",
+  "description" : "Introduction The OBITools are a set of tools meant to format, edit, filter and analyze environmental DNA (eDNA) next generation sequencing (NGS) data in the command line using bash. They were developed at the Laboratoire d\u0026rsquo;Ecologie ALpine (LECA), in Grenoble, France. There are many other pipelines for metabarcoding data analysis, but if you choose these, so as long as you can format your files for the OBITools (a sometimes non-trivial task, I know\u0026hellip;), they are fairly easy to get a handle on.",
+  "inLanguage" : "en",
+  "wordCount":  679 ,
+  "datePublished" : "2023-05-19T12:14:13",
+  "dateModified" : "2023-05-19T12:14:13",
+  "image" : "https:\/\/sciathlon.github.io\/img\/avatar-icon.png",
+  "keywords" : [ "Ecology, Metabarcoding, R, Bioinformatics, eDNA" ],
+  "mainEntityOfPage" : "https:\/\/sciathlon.github.io\/post\/intalling_robitools\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/sciathlon.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/sciathlon.github.io\/img\/avatar-icon.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="How to install the Robitools" />
+<meta property="og:description" content="Introduction The OBITools are a set of tools meant to format, edit, filter and analyze environmental DNA (eDNA) next generation sequencing (NGS) data in the command line using bash. They were developed at the Laboratoire d&rsquo;Ecologie ALpine (LECA), in Grenoble, France. There are many other pipelines for metabarcoding data analysis, but if you choose these, so as long as you can format your files for the OBITools (a sometimes non-trivial task, I know&hellip;), they are fairly easy to get a handle on.">
+<meta property="og:image" content="https://sciathlon.github.io/img/avatar-icon.png" />
+<meta property="og:url" content="https://sciathlon.github.io/post/intalling_robitools/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Sciathlon" />
+
+  <meta name="twitter:title" content="How to install the Robitools" />
+  <meta name="twitter:description" content="Introduction The OBITools are a set of tools meant to format, edit, filter and analyze environmental DNA (eDNA) next generation sequencing (NGS) data in the command line using bash. They were …">
+  <meta name="twitter:image" content="https://sciathlon.github.io/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link href='https://sciathlon.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.111.3">
+  <link rel="alternate" href="https://sciathlon.github.io/index.xml" type="application/rss+xml" title="Sciathlon"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"><link rel="stylesheet" href="https://sciathlon.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://sciathlon.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://sciathlon.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-119123667-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://sciathlon.github.io/">Sciathlon</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">Samples</a>
+              <div class="navlinks-children">
+                
+                  <a href="/post/2017-03-07-bigimg-sample">Big Image Sample</a>
+                
+                  <a href="/post/2017-03-05-math-sample">Math Sample</a>
+                
+                  <a href="/post/2016-03-08-code-sample">Code Sample</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Sciathlon" href="https://sciathlon.github.io/">
+            <img class="avatar-img" src="https://sciathlon.github.io/img/avatar-icon.png" alt="Sciathlon" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>How to install the Robitools</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on May 19, 2023
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;4&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;679&nbsp;words
+  
+  
+    
+      
+        &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Sciathlon
+      
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <h1 id="introduction">Introduction</h1>
+<p>The OBITools are a set of tools meant to format, edit, filter and analyze environmental DNA (eDNA) next generation sequencing (NGS) data in the command line using bash. They were developed at the Laboratoire d&rsquo;Ecologie ALpine (LECA), in Grenoble, France. There are many other pipelines for metabarcoding data analysis, but if you choose these, so as long as you can format your files for the OBITools (a sometimes non-trivial task, I know&hellip;), they are fairly easy to get a handle on.</p>
+<p>The ROBITools packages are the set of tools to use in R after using the OBITools in bash. We use them for further filtering, follow-up analysis/database formatting/analysis of in silico PCRs done from the tool ecoPCR.</p>
+<p>This post is a short tutorial on how to install the ROBITools on either a WINDOWS or a UNIX system, the two that I use regularly.</p>
+<h1 id="unix">UNIX</h1>
+<p>Under unix it is all really straightforward.</p>
+<ol>
+<li>Install the latest version of R <a href="https://cran.r-project.org/bin/windows/base/">https://cran.r-project.org/bin/windows/base/</a> (find out if your computer is 64bit or 32bit to select the right one) install standard parameters</li>
+<li>Install Rstudio (you can skip this step if you prefer the command line)</li>
+<li>Install Rtools compatible with your R version <a href="https://cran.r-project.org/bin/windows/Rtools/">https://cran.r-project.org/bin/windows/Rtools/</a> (do NOT skip this step!)</li>
+<li>Download the packages Robitaxonomy, Robitools, Robiutils, RObiBarcodes from this website: <a href="https://git.metabarcoding.org/obitools">https://git.metabarcoding.org/obitools</a> (sometimes the site is unaccessible, just wait until it is back online, it can sometimes take a few days depending on the bugs being fixed)</li>
+<li>Go to Tools-&gt;install packages-&gt; install from CRAN and select XML, igraph, devtools OR on the command line type for each package &ldquo;install.packages(&ldquo;package_name&rdquo;)</li>
+<li>If you forgot any of these packages it will not work!</li>
+<li>Go to Tools-&gt;install packages-&gt;install from package archive (.zip) and install the downloaded ROBItools packages in this order and if it doesn’t work mix them up, but this order worked for me (they throw crazy amounts of warnings, do not be alarmed):
+a.	ROBIUtils.tar.gz
+b.	ROBITaxonomy.tar.gz
+c.	ROBITBarcodes.tar.gz
+d.	ROBITools.tar.gz</li>
+<li>And now, normally you can load them using the “library() command.</li>
+</ol>
+<h1 id="windows">Windows</h1>
+<p>Under windows, there are a couple extra steps.</p>
+<ol>
+<li>Install the latest version of R <a href="https://cran.r-project.org/bin/windows/base/">https://cran.r-project.org/bin/windows/base/</a> (find out if your computer is 64bit or 32bit to select the right one) install standard parameters</li>
+<li>Install you favorite IDE if you want one, such as Rstudio (you can skip this step if you prefer the command line)</li>
+<li>Install Rtools compatible with your R version <a href="https://cran.r-project.org/bin/windows/Rtools/">https://cran.r-project.org/bin/windows/Rtools/</a> (do NOT skip this step!)</li>
+<li>Download the packages Robitaxonomy, Robitools, Robiutils, RObiBarcodes from this website: <a href="https://git.metabarcoding.org/obitools">https://git.metabarcoding.org/obitools</a> (sometimes the site is unaccessible, just wait until it is back online, it can sometimes take a few days depending on the bugs being fixed)</li>
+<li>unzip these packages if they are not already (but make sure that the folders within like src are directly under the package name directory and not below in the arborescence of folders or it will NOT work (ex: ROBITaxonomy/src and not ROBITaxonomy/ROBITaxonomy/src)</li>
+<li>On Rstudio, go to Tools-&gt;install packages-&gt; install from CRAN and select XML, igraph, devtools OR on the command line type for each package &ldquo;install.packages(&ldquo;package_name&rdquo;)</li>
+<li>Load devtools by using the command “library(devtools)”</li>
+<li>Use the following commands, one by one (make sure that your path is correct! If the folders don’t have exactly the name you’re inputting, or are not in the working directory, modify the path. Alternatively, use the “files” finder and the “More-&gt;set as directory in the bottom right corner panel. And don’t forget the quotes. And if at some point one of them doesn’t work, do another one and come to that one later. Do the taxonomy one last. Hey, no one said it had to be easy right? Yes, I still love/hate Windows^^):
+a.	build(“ROBITools”)
+b.	build(“ROBITutils”)
+c.	build(“ROBITBarcodes”)
+d.	build(“ROBITaxonomy”)</li>
+<li>Go to Tools-&gt;install packages-&gt;install from package archive (.zip) and install the downloaded ROBItools packages in this order and if it doesn’t work mix them up, but this order worked for me (they throw crazy amounts of warnings, do not be alarmed unless it&rsquo;s a proper error):
+a.	ROBIUtils.tar.gz
+b.	ROBITaxonomy.tar.gz
+c.	ROBITBarcodes.tar.gz
+d.	ROBITools.tar.gz</li>
+<li>And now, normally you can load them using the “library() command</li>
+</ol>
+<p>Until next time,
+Sciathlon</p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://sciathlon.github.io//tags/ecology/">Ecology</a>&nbsp;
+            
+              <a href="https://sciathlon.github.io//tags/metabarcoding/">Metabarcoding</a>&nbsp;
+            
+              <a href="https://sciathlon.github.io//tags/r/">R</a>&nbsp;
+            
+              <a href="https://sciathlon.github.io//tags/bioinformatics/">Bioinformatics</a>&nbsp;
+            
+              <a href="https://sciathlon.github.io//tags/edna/">eDNA</a>&nbsp;
+            
+          </div>
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=https%3a%2f%2fsciathlon.github.io%2fpost%2fintalling_robitools%2f&amp;text=How%20to%20install%20the%20Robitools&amp;via=" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsciathlon.github.io%2fpost%2fintalling_robitools%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=https%3a%2f%2fsciathlon.github.io%2fpost%2fintalling_robitools%2f&amp;title=How%20to%20install%20the%20Robitools" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fsciathlon.github.io%2fpost%2fintalling_robitools%2f&amp;title=How%20to%20install%20the%20Robitools" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fsciathlon.github.io%2fpost%2fintalling_robitools%2f&amp;title=How%20to%20install%20the%20Robitools" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fsciathlon.github.io%2fpost%2fintalling_robitools%2f&amp;description=How%20to%20install%20the%20Robitools" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/anacondatutorialblog/">Anaconda packages and environments for bioinformatics: a tutorial</a></li>
+                
+                    <li><a href="/post/biathlon_data_analysis/">Biathlon data analysis</a></li>
+                
+              </ul>
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://sciathlon.github.io/post/anacondatutorialblog/" data-toggle="tooltip" data-placement="top" title="Anaconda packages and environments for bioinformatics: a tutorial">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+		
+		  <a href="mailto:sciathlonblog@gmail.com" title="Email me">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://github.com/Sciathlon" title="GitHub">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2023
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://sciathlon.github.io/">Sciathlon</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.111.3</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js" integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha384-w5y/xIeYixWvfM+A1cEbmHPURnvyqmVg5eVENruEdDjcyRLUSNej7512JQGspFUr" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+<script src="https://sciathlon.github.io/js/main.js"></script>
+<script src="https://sciathlon.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://sciathlon.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

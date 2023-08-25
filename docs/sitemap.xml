@@ -3,14 +3,143 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://sciathlon.github.io/</loc>
-    <lastmod>2023-08-25T21:16:16+02:00</lastmod>
+    <lastmod>2023-05-19T12:14:13-04:00</lastmod>
     <priority>0</priority>
   </url><url>
-    <loc>https://sciathlon.github.io/posts/examplepost/</loc>
-    <lastmod>2023-08-25T21:16:16+02:00</lastmod>
+    <loc>https://sciathlon.github.io/tags/bioinformatics/</loc>
+    <lastmod>2023-05-19T12:14:13-04:00</lastmod>
   </url><url>
-    <loc>https://sciathlon.github.io/posts/</loc>
-    <lastmod>2023-08-25T21:16:16+02:00</lastmod>
+    <loc>https://sciathlon.github.io/tags/ecology/</loc>
+    <lastmod>2023-05-19T12:14:13-04:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/tags/edna/</loc>
+    <lastmod>2023-05-19T12:14:13-04:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/post/intalling_robitools/</loc>
+    <lastmod>2023-05-19T12:14:13-04:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/tags/metabarcoding/</loc>
+    <lastmod>2023-05-19T12:14:13-04:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/post/</loc>
+    <lastmod>2023-05-19T12:14:13-04:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/tags/r/</loc>
+    <lastmod>2023-05-19T12:14:13-04:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/tags/</loc>
+    <lastmod>2023-05-19T12:14:13-04:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/tags/anaconda/</loc>
+    <lastmod>2023-05-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/post/anacondatutorialblog/</loc>
+    <lastmod>2023-05-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/tags/install/</loc>
+    <lastmod>2023-05-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/tags/software/</loc>
+    <lastmod>2023-05-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/post/athletesfoot/</loc>
+    <lastmod>2018-06-05T20:55:49+02:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/tags/clinical-trial/</loc>
+    <lastmod>2018-06-05T20:55:49+02:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/tags/data-analysis/</loc>
+    <lastmod>2018-06-05T20:55:49+02:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/tags/fungi/</loc>
+    <lastmod>2018-06-05T20:55:49+02:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/tags/health/</loc>
+    <lastmod>2018-06-05T20:55:49+02:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/tags/infection/</loc>
+    <lastmod>2018-06-05T20:55:49+02:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/tags/pubmed/</loc>
+    <lastmod>2018-06-05T20:55:49+02:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/tags/europe/</loc>
+    <lastmod>2018-05-29T13:37:35+02:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/tags/running/</loc>
+    <lastmod>2018-05-29T13:37:35+02:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/post/running_and_waste/</loc>
+    <lastmod>2018-05-29T13:37:35+02:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/tags/soft-flask/</loc>
+    <lastmod>2018-05-29T13:37:35+02:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/tags/trash/</loc>
+    <lastmod>2018-05-29T13:37:35+02:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/tags/waste/</loc>
+    <lastmod>2018-05-29T13:37:35+02:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/tags/15k/</loc>
+    <lastmod>2018-05-24T18:17:42+02:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/tags/challenge-intercommunal-du-gr%C3%A9sivaudan/</loc>
+    <lastmod>2018-05-24T18:17:42+02:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/post/tencin_15k_analysis/</loc>
+    <lastmod>2018-05-24T18:17:42+02:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/tags/race/</loc>
+    <lastmod>2018-05-24T18:17:42+02:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/tags/trail-running/</loc>
+    <lastmod>2018-05-24T18:17:42+02:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/tags/half-marathon/</loc>
+    <lastmod>2018-05-13T16:42:11+02:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/post/my_first_half_marathon/</loc>
+    <lastmod>2018-05-13T16:42:11+02:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/tags/biathlon/</loc>
+    <lastmod>2018-02-09T22:25:58+01:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/post/biathlon_data_analysis/</loc>
+    <lastmod>2018-02-09T22:25:58+01:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/tags/olympics/</loc>
+    <lastmod>2018-02-09T22:25:58+01:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/tags/women/</loc>
+    <lastmod>2018-02-09T22:25:58+01:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/tags/world-championship/</loc>
+    <lastmod>2018-02-09T22:25:58+01:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/post/triathlon_pubmed_analysis/</loc>
+    <lastmod>2018-02-02T20:32:34+01:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/post/personal_best_figure_skating/</loc>
+    <lastmod>2018-01-20T20:32:34+01:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/post/analysis_medal_per_athlete/</loc>
+    <lastmod>2018-01-20T12:55:16+01:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/post/what-to-expect-at-winter-olympics-2018/</loc>
+    <lastmod>2018-01-11T18:57:35+01:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/post/the-history-of-skiing/</loc>
+    <lastmod>2018-01-10T13:38:51+01:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/post/best-sports-channels/</loc>
+    <lastmod>2018-01-09T21:53:16+01:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/tags/sports/</loc>
+    <lastmod>2018-01-09T21:53:16+01:00</lastmod>
+  </url><url>
+    <loc>https://sciathlon.github.io/tags/youtube/</loc>
+    <lastmod>2018-01-09T21:53:16+01:00</lastmod>
   </url><url>
     <loc>https://sciathlon.github.io/tags/example/</loc>
     <lastmod>2017-03-20T00:00:00+00:00</lastmod>
@@ -19,12 +148,6 @@
     <lastmod>2017-03-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://sciathlon.github.io/post/2017-03-20-photoswipe-gallery-sample/</loc>
-    <lastmod>2017-03-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://sciathlon.github.io/post/</loc>
-    <lastmod>2017-03-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://sciathlon.github.io/tags/</loc>
     <lastmod>2017-03-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://sciathlon.github.io/post/2017-03-07-bigimg-sample/</loc>

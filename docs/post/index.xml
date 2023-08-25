@@ -7,7 +7,127 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>sciathlonblog@gmail.com</managingEditor>
     <webMaster>sciathlonblog@gmail.com</webMaster>
-    <lastBuildDate>Mon, 20 Mar 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://sciathlon.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 19 May 2023 12:14:13 -0400</lastBuildDate><atom:link href="https://sciathlon.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to install the Robitools</title>
+      <link>https://sciathlon.github.io/post/intalling_robitools/</link>
+      <pubDate>Fri, 19 May 2023 12:14:13 -0400</pubDate>
+      <author>sciathlonblog@gmail.com</author>
+      <guid>https://sciathlon.github.io/post/intalling_robitools/</guid>
+      <description>Introduction The OBITools are a set of tools meant to format, edit, filter and analyze environmental DNA (eDNA) next generation sequencing (NGS) data in the command line using bash. They were developed at the Laboratoire d&amp;rsquo;Ecologie ALpine (LECA), in Grenoble, France. There are many other pipelines for metabarcoding data analysis, but if you choose these, so as long as you can format your files for the OBITools (a sometimes non-trivial task, I know&amp;hellip;), they are fairly easy to get a handle on.</description>
+    </item>
+    
+    <item>
+      <title>Anaconda packages and environments for bioinformatics: a tutorial</title>
+      <link>https://sciathlon.github.io/post/anacondatutorialblog/</link>
+      <pubDate>Sun, 14 May 2023 00:00:00 +0000</pubDate>
+      <author>sciathlonblog@gmail.com</author>
+      <guid>https://sciathlon.github.io/post/anacondatutorialblog/</guid>
+      <description>After abandoning this blog for several years I am back with different content. I want to write tutorials on what I&amp;rsquo;ve learned doing bioinformatics since I started my PhD, among other things and might be interesting or helpful to others. I started using anaconda during my postdoc in genomics and I use it every single day.
+Today, I wanted to write a summary of things I&amp;rsquo;ve learned using anaconda packages and environments for bioinformatics (but the same commands will work for other types of packages as well).</description>
+    </item>
+    
+    <item>
+      <title>Athlete&#39;s foot and its treatment</title>
+      <link>https://sciathlon.github.io/post/athletesfoot/</link>
+      <pubDate>Tue, 05 Jun 2018 20:55:49 +0200</pubDate>
+      <author>sciathlonblog@gmail.com</author>
+      <guid>https://sciathlon.github.io/post/athletesfoot/</guid>
+      <description>Today we will be looking at data about a health issue that affects many athletes: athlete&amp;rsquo;s foot. It&amp;rsquo;s not a very glamorous subject but it&amp;rsquo;s still interesting, as fungi are warrior eukaryotes that survive everywhere. Athlete&amp;rsquo;s foot is generally a fungal infection on the feet referred to as &amp;ldquo;tinea pedis&amp;rdquo; but can be something else that causes inflammation on the foot, however the definitions vary according to who you talk to&amp;hellip; I am going to stick to the more accepted definition which is the fungal infection.</description>
+    </item>
+    
+    <item>
+      <title>Running races and waste</title>
+      <link>https://sciathlon.github.io/post/running_and_waste/</link>
+      <pubDate>Tue, 29 May 2018 13:37:35 +0200</pubDate>
+      <author>sciathlonblog@gmail.com</author>
+      <guid>https://sciathlon.github.io/post/running_and_waste/</guid>
+      <description>I am tackling a new topic today, which is waste generated during races. I&amp;rsquo;ll tell you why this is coming up now. I started the racing season with a road 10km called Asparun which was a relatively small race, 354 runners on the 10k plus probably as many on the 5k, which is more people than I usually see at my small local races, and I saw so many people just throwing their water goblets not IN the trash but sometimes 500 meters away, and it shocked me.</description>
+    </item>
+    
+    <item>
+      <title>Favorite trail race: Tencin 15km analysis</title>
+      <link>https://sciathlon.github.io/post/tencin_15k_analysis/</link>
+      <pubDate>Thu, 24 May 2018 18:17:42 +0200</pubDate>
+      <author>sciathlonblog@gmail.com</author>
+      <guid>https://sciathlon.github.io/post/tencin_15k_analysis/</guid>
+      <description>I am continuing my journey to learn awk and I finally managed to process (almost) an entire file today so let&amp;rsquo;s analyse the 2018 Tencin trail race. It was my first trail race of the season, and it kicks off the &amp;ldquo;challenge intercommunal du grésivaudan&amp;rdquo;, which is a set of 11 races in this region called the Grésivaudan which is a valley in between the two mountains of Belledonne and Chartreuse in the Alps.</description>
+    </item>
+    
+    <item>
+      <title>My first half marathon and its data analysis</title>
+      <link>https://sciathlon.github.io/post/my_first_half_marathon/</link>
+      <pubDate>Sun, 13 May 2018 16:42:11 +0200</pubDate>
+      <author>sciathlonblog@gmail.com</author>
+      <guid>https://sciathlon.github.io/post/my_first_half_marathon/</guid>
+      <description>A me-centered data analysis today where I will share my experience running my first half marathon and the race data.
+I&amp;rsquo;ve only been running regularly for a year, and I&amp;rsquo;d been dreaming about this day since I started. It was still kind of a dream for the longest time, something that I wanted but was still only a concept until the day arrived and I realized: &amp;ldquo;I&amp;rsquo;m running a half marathon today.</description>
+    </item>
+    
+    <item>
+      <title>Biathlon data analysis</title>
+      <link>https://sciathlon.github.io/post/biathlon_data_analysis/</link>
+      <pubDate>Fri, 09 Feb 2018 22:25:58 +0100</pubDate>
+      <author>sciathlonblog@gmail.com</author>
+      <guid>https://sciathlon.github.io/post/biathlon_data_analysis/</guid>
+      <description>This week I&amp;rsquo;m at a metabarcoding school in Norway, so it gets dark very early and I have time for another post. In honor of the 2018 Winter Olympics finally kicking off, I asked a friend of mine who loves sports what data he would be interested in seeing in the sports that are in the winter Olympics and he answered &amp;ldquo;biathlon.&amp;rdquo; I found a website that collects lots of data on the sport called biathlonresults.</description>
+    </item>
+    
+    <item>
+      <title>Triathlon pubmed analysis</title>
+      <link>https://sciathlon.github.io/post/triathlon_pubmed_analysis/</link>
+      <pubDate>Fri, 02 Feb 2018 20:32:34 +0100</pubDate>
+      <author>sciathlonblog@gmail.com</author>
+      <guid>https://sciathlon.github.io/post/triathlon_pubmed_analysis/</guid>
+      <description>Today I am using the RISmed package for R to analyze publications about triathlon. It is an amazing package to look through the Pubmed database for what they have on a certain subject. Pubmed is a NIH (USA) funded database which hosts articles about medicine and biology. Today, I am looking at studies that have been done on injuries, disease and human physiology that have to do with triathlon. I am not a triathlete yet, I am just focusing on running this year but it is on my radar.</description>
+    </item>
+    
+    <item>
+      <title>Figure skating athletes&#39; personal best</title>
+      <link>https://sciathlon.github.io/post/personal_best_figure_skating/</link>
+      <pubDate>Sat, 20 Jan 2018 20:32:34 +0100</pubDate>
+      <author>sciathlonblog@gmail.com</author>
+      <guid>https://sciathlon.github.io/post/personal_best_figure_skating/</guid>
+      <description>Today I am writing another piece about figure skating, also another piece about data analysis in this event. But I am not focusing solely on the Olympics this time but on the best scoring athletes and the best scoring event of each athlete. There is a lot of data to go through, so let&amp;rsquo;s get right into it! The data comes from the (International skating Union) website which I downloaded on the 20/01/2018 (if you try my code and the results are different it might be because the data on the website has changed).</description>
+    </item>
+    
+    <item>
+      <title>R figure skating analysis</title>
+      <link>https://sciathlon.github.io/post/analysis_medal_per_athlete/</link>
+      <pubDate>Sat, 20 Jan 2018 12:55:16 +0100</pubDate>
+      <author>sciathlonblog@gmail.com</author>
+      <guid>https://sciathlon.github.io/post/analysis_medal_per_athlete/</guid>
+      <description>Analysing medals won per athlete/per country with R As I am learning data science by doing little projects, today I am introducing a little data analysis using R on figure skating in the Olympics. I am going to look at the medals won using data from the official Olympics database website. First I formatted the data to make it a csv (comma separated values) file which is very easy to parse in R</description>
+    </item>
+    
+    <item>
+      <title>What to Expect at Winter Olympics 2018 for figure skating</title>
+      <link>https://sciathlon.github.io/post/what-to-expect-at-winter-olympics-2018/</link>
+      <pubDate>Thu, 11 Jan 2018 18:57:35 +0100</pubDate>
+      <author>sciathlonblog@gmail.com</author>
+      <guid>https://sciathlon.github.io/post/what-to-expect-at-winter-olympics-2018/</guid>
+      <description>The winter olympics are coming! This is not a data science article, but those will come soon. Anyway, tt is an exciting time to celebrate our favorite sports and feel inspired to do better ourselves. It is going to be interesting this year with the doping ban for Russia as well as many unfortunate injuries and retirements. Figure skating is my favorite event because it is an incredibly beautiful and hard sport that I practised for a few years when I was young.</description>
+    </item>
+    
+    <item>
+      <title>A History of Skiing</title>
+      <link>https://sciathlon.github.io/post/the-history-of-skiing/</link>
+      <pubDate>Wed, 10 Jan 2018 13:38:51 +0100</pubDate>
+      <author>sciathlonblog@gmail.com</author>
+      <guid>https://sciathlon.github.io/post/the-history-of-skiing/</guid>
+      <description>This article is not about data science but history, and one that came out of sheer curiosity that I thought I&amp;rsquo;d share. I started skiing at the age of 3 at the station in the Alps called the &amp;ldquo;Sept Laux&amp;rdquo; next to Grenoble, France. It was natural to me, but until now I never wondered for how long people have done it. Here is a brief history of how it all began.</description>
+    </item>
+    
+    <item>
+      <title>My favorite Sports Youtube Channels</title>
+      <link>https://sciathlon.github.io/post/best-sports-channels/</link>
+      <pubDate>Tue, 09 Jan 2018 21:53:16 +0100</pubDate>
+      <author>sciathlonblog@gmail.com</author>
+      <guid>https://sciathlon.github.io/post/best-sports-channels/</guid>
+      <description>Today there isn&amp;rsquo;t any data science, I just wanted to share a list of my favorite sports-related YouTube channels, in no particular order.
+TheGingerRunner If you are interested in running and want to learn more about trails, races, athletes, training, gear, nutrition, there are amazing ressources out therethat will teach and inspire you. I have compiled a little list of my favorite youtube channels that I have been following for years.</description>
+    </item>
+    
     <item>
       <title>Photoswipe Gallery Sample</title>
       <link>https://sciathlon.github.io/post/2017-03-20-photoswipe-gallery-sample/</link>

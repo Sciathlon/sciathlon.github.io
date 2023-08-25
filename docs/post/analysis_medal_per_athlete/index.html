@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+ 
+
+
+      <title>R figure skating analysis - </title>
+
+  <meta name="description" content="Analysing medals won per athlete/per country with R As I am learning data science by doing little projects, today I am introducing a little data analysis using R on figure skating in the Olympics. I am going to look at the medals won using data from the official Olympics database website. First I formatted the data to make it a csv (comma separated values) file which is very easy to parse in R"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Sciathlon",
+    
+    "url": "https:\/\/sciathlon.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/sciathlon.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/sciathlon.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/sciathlon.github.io\/post\/analysis_medal_per_athlete\/",
+          "name": "R figure skating analysis"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : ""
+  },
+  "headline": "R figure skating analysis",
+  "description" : "Analysing medals won per athlete\/per country with R As I am learning data science by doing little projects, today I am introducing a little data analysis using R on figure skating in the Olympics. I am going to look at the medals won using data from the official Olympics database website. First I formatted the data to make it a csv (comma separated values) file which is very easy to parse in R",
+  "inLanguage" : "en",
+  "wordCount":  1207 ,
+  "datePublished" : "2018-01-20T12:55:16",
+  "dateModified" : "2018-01-20T12:55:16",
+  "image" : "https:\/\/sciathlon.github.io\/img\/avatar-icon.png",
+  "keywords" : [ "" ],
+  "mainEntityOfPage" : "https:\/\/sciathlon.github.io\/post\/analysis_medal_per_athlete\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/sciathlon.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/sciathlon.github.io\/img\/avatar-icon.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="R figure skating analysis" />
+<meta property="og:description" content="Analysing medals won per athlete/per country with R As I am learning data science by doing little projects, today I am introducing a little data analysis using R on figure skating in the Olympics. I am going to look at the medals won using data from the official Olympics database website. First I formatted the data to make it a csv (comma separated values) file which is very easy to parse in R">
+<meta property="og:image" content="https://sciathlon.github.io/img/avatar-icon.png" />
+<meta property="og:url" content="https://sciathlon.github.io/post/analysis_medal_per_athlete/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Sciathlon" />
+
+  <meta name="twitter:title" content="R figure skating analysis" />
+  <meta name="twitter:description" content="Analysing medals won per athlete/per country with R As I am learning data science by doing little projects, today I am introducing a little data analysis using R on figure skating in the Olympics. I …">
+  <meta name="twitter:image" content="https://sciathlon.github.io/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link href='https://sciathlon.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.111.3">
+  <link rel="alternate" href="https://sciathlon.github.io/index.xml" type="application/rss+xml" title="Sciathlon"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"><link rel="stylesheet" href="https://sciathlon.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://sciathlon.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://sciathlon.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-119123667-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://sciathlon.github.io/">Sciathlon</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent">Samples</a>
+              <div class="navlinks-children">
+                
+                  <a href="/post/2017-03-07-bigimg-sample">Big Image Sample</a>
+                
+                  <a href="/post/2017-03-05-math-sample">Math Sample</a>
+                
+                  <a href="/post/2016-03-08-code-sample">Code Sample</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Sciathlon" href="https://sciathlon.github.io/">
+            <img class="avatar-img" src="https://sciathlon.github.io/img/avatar-icon.png" alt="Sciathlon" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>R figure skating analysis</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on January 20, 2018
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;6&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1207&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <h1 id="analysing-medals-won-per-athleteper-country-with-r">Analysing medals won per athlete/per country with R</h1>
+<p>As I am learning data science by doing little projects, today I am introducing a little data analysis using
+<a href="https://www.r-project.org/">R</a> on figure skating in the Olympics. I am going to look at the
+medals won using data from the <a href="http://www.olympiandatabase.com">official Olympics database
+website</a>. First I formatted the data to
+make it a csv (comma separated values) file which is very easy to parse
+in R</p>
+<h2 id="total-number-of-athletes-that-have-won-at-least-a-medal-per-country">Total number of athletes that have won at least a medal per country</h2>
+<p><img src="../Analysis_medal_per_athlete_files/figure-markdown_strict/unnamed-chunk-1-1.png" alt=""></p>
+<p>This first plot represents the total number of medals per country over
+all the years they participated. Figure skating has been part of the
+winter Games since the beginning but not all nations have participated
+since the start, and some countries don&rsquo;t exist any more but they are
+still represented under their official name of the time, for example the
+USSR. Looking at the plot, the first thing we notice are the highest
+scoring nations: USA, Russia (both modern and USSR with the code USR),
+Canada, Austria. Let&rsquo;s dig deeper into what kind of medals each country
+mostly wins to see if certain countries are better:</p>
+<h2 id="number-of-gold-medals-per-country">Number of gold medals per country</h2>
+<p><img src="../Analysis_medal_per_athlete_files/figure-markdown_strict/unnamed-chunk-2-1.png" alt=""></p>
+<p>Here we see a clear difference with the previous plot: Russia clearly
+dominates the sport, more than twice the amount compared to any other
+country if you count Russia+USSR wins. My own country, France, is pretty
+low in that plot (we are great at the dance category though). Another thing I noted is Canada is not doing as well as I&rsquo;d imagined
+well, which I was surprised about. Now let&rsquo;s zoom in on the athletes
+that are so good they won multiple times:</p>
+<h2 id="athletes-that-have-won-multiple-times">Athletes that have won multiple times</h2>
+<!-- raw HTML omitted -->
+<p>Most of those on the list are Russian, but number
+1 and 2 are from Sweden and Norway. Gillis Grafström is the most
+successful skater at the olympics, but passed away in 1938. Norwegian
+Sonja Henie was also a very successful skater and celebrity and left us
+in 1969. Irina Rodnina is retired from competition and is now doing
+politics.</p>
+<h2 id="french-athletes-with-medals">French athletes with medals</h2>
+<p>Since I am french and I used to skate in France, I&rsquo;m very interested in
+how we did over the years so here are all the french athletes who have
+won at least a medal in the order they are scored according to how many
+and which color their medals were.</p>
+<!-- raw HTML omitted -->
+<p>We have 10 french athletes who have won medals in history, and when
+I started skating it was when the Marina and Gwendal couple were very
+famous and I wanted to be like them. Andree and Pierre Brunet
+were also a very famous couple and revolutionized the sport at the time,
+they are proper legends. Let&rsquo;s look at those athletes who don&rsquo;t get as much attention,
+the ones who have not won the olympics:</p>
+<h2 id="athletes-who-have-not-won-a-gold-medal">Athletes who have not won a gold medal</h2>
+<p><img src="../Analysis_medal_per_athlete_files/figure-markdown_strict/unnamed-chunk-5-1.png" alt=""></p>
+<p>We notice that there is a very high number of athletes from USA who
+never won gold, more than in any country. However we know they also
+enter the highest number of athletes because they have the budget to
+send as many athletes as possible and not just the ones they know will
+win. To showcase that more, let&rsquo;s look at the
+proportions of winning athletes per country:</p>
+<p><img src="../Analysis_medal_per_athlete_files/figure-markdown_strict/unnamed-chunk-6-1.png" alt=""></p>
+<p>Some countries have very few
+medal winning athletes, Korea has only one athlete that won medals and
+she won gold once, and Finland has had 2 that also both won so they both
+have a 100% win rate of medal winning athletes, which tells us a little about their strategy: send only the ones who can win. Otherwize Russia, of course, and its close
+neighbour Belarus have the highest proportion of gold medals per
+medal-winning athlete.</p>
+<h2 id="best-scoring-athletes-at-the-olympics">Best scoring athletes at the olympics</h2>
+<p>I am using a different database here which is from the ISU
+(<a href="http://www.isu.org/statistics">International skating Union</a>) and holds
+all the personal best of athletes. Because this article is about the
+olympics, I will focus on athletes that have had their personal best at
+Olympic events. This is biased in the sense that not all athletes have
+their personal Best during an Olympic event, because it&rsquo;s so much
+pressure it can be difficult to do your best, but as I am interested in
+what happens at an Olympic event, I think it&rsquo;s fitting to use this set
+of data. This data represents athletes that do their best in this event.</p>
+<h3 id="ladies-performances">Ladies&rsquo; performances</h3>
+<pre><code>## Parsed with column specification:
+## cols(
+##   rank = col_integer(),
+##   Name = col_character(),
+##   NationID = col_character(),
+##   Event = col_character(),
+##   Date = col_character(),
+##   Score = col_double(),
+##   Category = col_character()
+## )
+</code></pre>
+<!-- raw HTML omitted -->
+<p>Here is a table of all the athletes competing in the ladie&rsquo;s event at
+Olympics and have had their personal best in them. Here they are sorted
+by score and the beautiful Korean Yuna Kim is at the top. Adelina
+SOTNIKOVA just below her won the last Olympics. Below her, Carolina
+KOSTNER is an italian ice skating legend, she has a very unique style.
+The french Mae Berenice MEITE is a few spots below, she is very
+successful in France and with a very athletic technique, some of her tricks are so dangerous they have been banned from competition.</p>
+<p>Let&rsquo;s look at the last games from 2014:</p>
+<!-- raw HTML omitted -->
+<p>In the last Olympics, 4 athletes got their career PB, the winner Adelina
+SOTNIKOVA, two italians Carolina KOSTNER and Valentina MARCHEI, and &hellip;
+our french national winner, Mae Berenice MEITE! We&rsquo;ll see if the 2014
+winner can beat her own score this year, I certainly hope for something
+spectacular.</p>
+<pre><code>## Parsed with column specification:
+## cols(
+##   rank = col_integer(),
+##   Name = col_character(),
+##   NationID = col_character(),
+##   Event = col_character(),
+##   Date = col_character(),
+##   Score = col_double(),
+##   category = col_character()
+## )
+</code></pre>
+<!-- raw HTML omitted -->
+<p>For men we have 13 athletes that seem to do their best during Olympics,
+from various nationalities.</p>
+<!-- raw HTML omitted -->
+<p>During the last Olympics however only two men have had their best score
+there, German Peter Liebers and Czech Tomas Verner, neither ranking in
+the top 10 scores of all time.</p>
+<p>That&rsquo;s all for today, I hope this was entertaining! There is still so
+much we could do with this data but it&rsquo;ll be for another time!</p>
+<p>Sciathlete</p>
+<p>Here is the code if you want to have a look:</p>
+<pre><code>#reading csv file
+medalCount &lt;- read.csv(file=&quot;./stats_athletes_with_medals_count.csv&quot;, header=TRUE, sep=&quot;,&quot;)
+medalCountdf &lt;- data.frame(medalCount)
+#number of athletes per country that have won at least one medal
+tbl_total_num_athletes_with_medal &lt;- table(medalCountdf$NationID)
+barplot(tbl_total_num_athletes_with_medal, main=&quot;Number of medals won per country&quot;)
+#Number of gold medals won per country
+tbl_gold &lt;- table(medalCountdf[which(medalCountdf$G!=0),]$NationID)
+barplot(tbl_gold, main=&quot;Number of gold medals won per country&quot;)
+#table of multiple winning athletes
+multiple_gold_athletes &lt;- medalCountdf[which(medalCountdf$G&gt;1),]
+print(multiple_gold_athletes)
+#table of french athletes with medals
+french_athletes_score &lt;- medalCountdf[which(medalCountdf$NationID==&quot;FRA&quot;),]
+print(french_athletes_score)
+#table of countries that have never won gold
+nations_with_athletes_with_no_wins &lt;- table(medalCountdf[which(medalCountdf$G&lt;1),]$NationID)
+barplot(nations_with_athletes_with_no_wins, main=&quot;Number of athletes per country who have never won&quot;)
+#proportion of athletes that won a medal that won gold
+proportionWinningAthletes &lt;- table(medalCountdf[which(medalCountdf$G&gt;0),]$NationID)/table(medalCountdf$NationID)
+barplot(proportionWinningAthletes*100)
+
+print((sum(table(medalCountdf[which(medalCountdf$G&gt;0),]$NationID))/length(medalCountdf$NationID))*100)
+#reading Personal Best dataframe
+library(readODS)
+ISU_ladies_df &lt;- read_ods(&quot;ISU_events_PB_ladies.ods&quot;) ## return only the first sheet
+olympics_ladies &lt;- ISU_ladies_df[grep(&quot;Olympic&quot;,ISU_ladies_df$Event),]
+olympics_ladies
+
+olympics_ladies_2014 &lt;- olympics_ladies[grep(&quot;2014&quot;,olympics_ladies$Date),]
+olympics_ladies_2014
+
+ISU_men_df &lt;- read_ods(&quot;ISU_events_PB_men.ods&quot;)
+olympics_men &lt;- ISU_men_df[grep(&quot;Olympic&quot;,ISU_men_df$Event),]
+olympics_men
+#Personal best of athletes obtained in 2014 Olympics
+olympics_men_2014 &lt;- olympics_men[grep(&quot;14&quot;,olympics_men$Date),]
+olympics_men_2014
+</code></pre>
+
+
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=https%3a%2f%2fsciathlon.github.io%2fpost%2fanalysis_medal_per_athlete%2f&amp;text=R%20figure%20skating%20analysis&amp;via=" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsciathlon.github.io%2fpost%2fanalysis_medal_per_athlete%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=https%3a%2f%2fsciathlon.github.io%2fpost%2fanalysis_medal_per_athlete%2f&amp;title=R%20figure%20skating%20analysis" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fsciathlon.github.io%2fpost%2fanalysis_medal_per_athlete%2f&amp;title=R%20figure%20skating%20analysis" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fsciathlon.github.io%2fpost%2fanalysis_medal_per_athlete%2f&amp;title=R%20figure%20skating%20analysis" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fsciathlon.github.io%2fpost%2fanalysis_medal_per_athlete%2f&amp;description=R%20figure%20skating%20analysis" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://sciathlon.github.io/post/what-to-expect-at-winter-olympics-2018/" data-toggle="tooltip" data-placement="top" title="What to Expect at Winter Olympics 2018 for figure skating">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://sciathlon.github.io/post/personal_best_figure_skating/" data-toggle="tooltip" data-placement="top" title="Figure skating athletes&#39; personal best">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+		
+		  <a href="mailto:sciathlonblog@gmail.com" title="Email me">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://github.com/Sciathlon" title="GitHub">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2023
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://sciathlon.github.io/">Sciathlon</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.111.3</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js" integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha384-w5y/xIeYixWvfM+A1cEbmHPURnvyqmVg5eVENruEdDjcyRLUSNej7512JQGspFUr" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+<script src="https://sciathlon.github.io/js/main.js"></script>
+<script src="https://sciathlon.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://sciathlon.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+
