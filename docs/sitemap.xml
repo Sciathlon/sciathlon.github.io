@@ -2,10 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://sciathlon.github.io/sciathlonblog/</loc>
+    <loc>https://sciathlon.github.io/categories/</loc>
   </url><url>
-    <loc>https://sciathlon.github.io/sciathlonblog/categories/</loc>
+    <loc>https://sciathlon.github.io/</loc>
   </url><url>
-    <loc>https://sciathlon.github.io/sciathlonblog/tags/</loc>
+    <loc>https://sciathlon.github.io/tags/</loc>
   </url>
 </urlset>

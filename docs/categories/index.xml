@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Beautiful Hugo</title>
-    <link>https://sciathlon.github.io/sciathlonblog/categories/</link>
-    <description>Recent content in Categories on Beautiful Hugo</description>
+    <title>Categories on Sciathlon</title>
+    <link>https://sciathlon.github.io/categories/</link>
+    <description>Recent content in Categories on Sciathlon</description>
     <generator>Hugo -- gohugo.io</generator>
-    <managingEditor>youremail@domain.com (Some Person)</managingEditor>
-    <webMaster>youremail@domain.com (Some Person)</webMaster><atom:link href="https://sciathlon.github.io/sciathlonblog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <managingEditor>sciathlonblog@gmail.com</managingEditor>
+    <webMaster>sciathlonblog@gmail.com</webMaster><atom:link href="https://sciathlon.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
