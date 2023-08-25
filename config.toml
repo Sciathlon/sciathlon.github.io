@@ -14,7 +14,7 @@ publishDir = "docs"
 
 [Params]
 #  homeTitle = "Sciathlon" # Set a different text for the header on the home page
-  subtitle = "Build a beautiful and simple website in minutes"
+  subtitle = "A blog about sports data science and bioinformatics"
   mainSections = ["post","posts"]
   logo = "img/avatar-icon.png" # Expecting square dimensions
   favicon = "img/favicon.ico"
